@@ -1,0 +1,32 @@
+﻿@using EntitiyLayer.Models
+@model List<Category>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<h2>Ürün Listesi</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>İsim</th>
+            <th>Açıklama</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var x in Model)
+        {
+            <tr>
+                <td>@x.CategoryId</td>
+                <td>@x.CategoryName</td>
+                <td>@x.CategoryDescription</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
