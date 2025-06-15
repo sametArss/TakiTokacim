@@ -24,7 +24,7 @@ namespace EntitiyLayer.Models
         public int CategoryId { get; set; }
         public virtual Category Category { get; set; }
 
-
+        public ICollection<Comments> Comments { get; set; }
 
     }
 }

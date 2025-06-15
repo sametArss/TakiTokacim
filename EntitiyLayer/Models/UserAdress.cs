@@ -26,6 +26,8 @@ namespace EntitiyLayer.Models
         public int DistrictId { get; set; }
         public virtual District District { get; set; }
 
+        public ICollection<Order> Orders { get; set; }
+
 
     }
 }

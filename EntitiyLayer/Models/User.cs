@@ -22,6 +22,9 @@ namespace EntitiyLayer.Models
         public bool  UserStatus { get; set; }
 
         public ICollection<UserAdress> UserAdresses { get; set; }
+        public ICollection<Payment> Payments { get; set; }
+        public ICollection<Comments> Comments { get; set; }
+        public ICollection<Order> Orders { get; set; }
 
     }
 }
