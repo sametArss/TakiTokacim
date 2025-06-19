@@ -1,0 +1,16 @@
+@model dynamic
+@{
+    ViewData["Title"] = Model.Name;
+}
+<div class="row justify-content-center mt-5">
+    <div class="col-md-6">
+        <div class="card border-0 shadow-lg p-4">
+            <img src="@Model.Image" class="card-img-top mb-4" alt="@Model.Name" style="border-radius:18px;">
+            <h2 class="fw-bold mb-2" style="color:#e67e22;">@Model.Name</h2>
+            <div class="mb-2 text-muted">@Model.Category</div>
+            <div class="mb-3" style="font-size:1.3rem; color:#e67e22; font-weight:600;">@Model.Price TL</div>
+            <p class="mb-4">@Model.Description</p>
+            <a href="#" class="btn btn-warning btn-lg w-100" style="background:#e67e22; border:none;">Sepete Ekle</a>
+        </div>
+    </div>
+</div> 

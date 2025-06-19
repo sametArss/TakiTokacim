@@ -17,5 +17,12 @@ namespace TakiTokacim.Controllers
             var values =_categoryService.GetAll();
             return View(values);
         }
+
+
+        public IActionResult Index2()
+        {
+            
+            return View();
+        }
     }
 }
