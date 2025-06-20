@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace DataAcsessLayer.Abstract
 {
-    public interface ICategoryDal:IGenericRepositoriesDal<Category>
+    public interface ICommentsDal:IGenericRepositoriesDal<Comments>
     {
-         
+
     }
 }

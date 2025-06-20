@@ -1,0 +1,57 @@
+﻿using DataAcsessLayer.Abstract;
+using DataAcsessLayer.Concrete.Context;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DataAcsessLayer.Concrete.Repositories
+{
+    public class GenericRepositoriesDal<T>:IGenericRepositoriesDal<T> where T :class
+    {
+        protected readonly AppDbContext _context;
+        
+
+        public GenericRepositoriesDal(AppDbContext context)
+        {
+            _context = context;
+        }
+
+        public void Insert(T entity)
+        {
+            _context.Set<T>().Add(entity);
+            _context.SaveChanges();
+        }
+
+        public void Delete(T entity)
+        {
+            _context.Set<T>().Remove(entity);
+            _context.SaveChanges();
+        }
+
+        public void Update(T entity)
+        {
+            _context.Set<T>().Update(entity);
+            _context.SaveChanges();
+        }
+
+        public T GetById(int id)
+        {
+            return _context.Set<T>().Find(id);
+        }
+
+        public List<T> GetAll()
+        {
+            return _context.Set<T>().ToList();
+        }
+
+        public List<T> GetAll(Expression<Func<T, bool>> filter)
+        {
+            return _context.Set<T>().Where(filter).ToList();
+        }
+    }
+}
+
