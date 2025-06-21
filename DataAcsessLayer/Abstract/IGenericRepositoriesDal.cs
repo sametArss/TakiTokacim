@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -14,6 +15,9 @@ namespace DataAcsessLayer.Abstract
         void Update(T entity);
         T GetById(int id);
         List<T> GetAll();
-        List<T> GetAll(Expression<Func<T, bool>> filter);
+        List<T> GetAllFilter(Expression<Func<T, bool>> filter);
+        T GetByFilter(Expression<Func<T, bool>> filter);
+      
+        
     }
 }

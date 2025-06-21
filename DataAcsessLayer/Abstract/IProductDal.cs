@@ -7,7 +7,10 @@ using System.Threading.Tasks;
 
 namespace DataAcsessLayer.Abstract
 {
-    public interface IProductDal:IGenericRepositoriesDal<Product>
+    public interface IProductDal : IGenericRepositoriesDal<Product>
     {
+        Product GetByIdWithCategory(int id);
     }
 }
+  
+

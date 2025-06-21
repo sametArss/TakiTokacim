@@ -7,8 +7,11 @@ using System.Threading.Tasks;
 
 namespace BusiniessLayer.Abstract
 {
-    public interface ICategoryService
+    public interface  IProductService
     {
-        List<Category> GetAllCategory();
+        List<Product> GetAllProducts();
+        List<Product> GetByCategory(string categoryName);
+
+        Product GetByIdProduct(int id);
     }
 }

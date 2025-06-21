@@ -48,9 +48,14 @@ namespace DataAcsessLayer.Concrete.Repositories
             return _context.Set<T>().ToList();
         }
 
-        public List<T> GetAll(Expression<Func<T, bool>> filter)
+        public List<T> GetAllFilter(Expression<Func<T, bool>> filter)
         {
             return _context.Set<T>().Where(filter).ToList();
+        }
+
+        public T GetByFilter(Expression<Func<T, bool>> filter)
+        {
+            return _context.Set<T>().FirstOrDefault(filter);
         }
     }
 }

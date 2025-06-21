@@ -4,6 +4,8 @@ using BusiniessLayer.Abstract;
 using BusiniessLayer.Concrete;
 using DataAcsessLayer.Abstract;
 using DataAcsessLayer.Concrete.Repositories;
+using DataAcsessLayer.EntityFramework;
+using Microsoft.AspNetCore.Cors.Infrastructure;
 var builder = WebApplication.CreateBuilder(args);
 
 // appsettings.json'daki connection string'i oku
@@ -13,10 +15,30 @@ string connectionString = builder.Configuration.GetConnectionString("DefaultConn
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(connectionString));
 
+// Generic Repository
+builder.Services.AddScoped(typeof(IGenericRepositoriesDal<>), typeof(GenericRepositoriesDal<>));
 
+// Entity'ye özel DAL'lar
+builder.Services.AddScoped<ICartDal, EfCartDal>();
+builder.Services.AddScoped<IProductDal, EFProductDal>();
+builder.Services.AddScoped<ICategoryDal, EFCategoryDal>();
+builder.Services.AddScoped<ICartItemsDal, EFCartItemDal>();
+builder.Services.AddScoped<ICityDal, EFCityDal>();
+builder.Services.AddScoped<ICommentsDal, EFCommentsDal>();
+builder.Services.AddScoped<IDistrictDal, EFDistrictDal>();
+builder.Services.AddScoped<IOrderDal, EFOrderDal>();
+builder.Services.AddScoped<IPaymentDal, EFPaymentDal>();
+builder.Services.AddScoped<IPaymentTypeDal, EFPaymentTypeDal>();
+builder.Services.AddScoped<IUserDal, EFUserDal>();
+builder.Services.AddScoped<IUserAdressDal, EFUserAdressDal>();
 
-builder.Services.AddScoped<ICategoryDal, CategoryRepositories>();
+// Service Katmaný
+builder.Services.AddScoped<IProductService, ProductManager>();
 builder.Services.AddScoped<ICategoryService, CategoryManager>();
+
+
+
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

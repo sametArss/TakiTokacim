@@ -17,9 +17,10 @@ namespace BusiniessLayer.Concrete
         {
             _categoryDal = categoryDal;
         }
-        public List<Category> GetAll()
+       
+        public List<Category> GetAllCategory()
         {
-           return _categoryDal.GetAllList();
+            return _categoryDal.GetAll();
         }
     }
 }

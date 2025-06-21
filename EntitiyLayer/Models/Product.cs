@@ -19,6 +19,10 @@ namespace EntitiyLayer.Models
         public decimal ProductPrice { get; set; }
         public short ProductStock { get; set; }
 
+        public string ProductImage1 { get; set; }
+        public string ProductImage2 { get; set; }
+        public string ProductImage3 { get; set; }
+       
         public bool ProductStatus { get; set; }
 
         public int CategoryId { get; set; }
