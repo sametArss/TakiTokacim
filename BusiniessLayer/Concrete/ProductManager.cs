@@ -41,5 +41,7 @@ namespace BusiniessLayer.Concrete
             return _productDal.GetByIdWithCategory(id);
 
         }
+
+       
     }
 }

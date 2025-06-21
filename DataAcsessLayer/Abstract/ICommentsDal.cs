@@ -1,4 +1,5 @@
 ﻿using EntitiyLayer.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,7 @@ namespace DataAcsessLayer.Abstract
 {
     public interface ICommentsDal:IGenericRepositoriesDal<Comments>
     {
-        Task AddAsync(Comments entity);
-        IQueryable<Comments> GetAllFilter(Expression<Func<Comments, bool>> filter);
+        List<Comments> CommentAll();
+       
     }
 }

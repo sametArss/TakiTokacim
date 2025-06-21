@@ -2,6 +2,7 @@
 using DataAcsessLayer.Concrete.Context;
 using DataAcsessLayer.Concrete.Repositories;
 using EntitiyLayer.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,21 +14,17 @@ namespace DataAcsessLayer.EntityFramework
 {
     public class EFCommentsDal:GenericRepositoriesDal<Comments>,ICommentsDal
     {
-    
-            public EFCommentsDal(AppDbContext context) : base(context)
-            {
-            }
 
-            public async Task AddAsync(Comments entity)
-            {
-                await _context.Set<Comments>().AddAsync(entity);
-                await _context.SaveChangesAsync();
-            }
-
-        IQueryable<Comments> ICommentsDal.GetAllFilter(Expression<Func<Comments, bool>> filter)
+        public EFCommentsDal(AppDbContext context) : base(context)
         {
-            return _context.Set<Comments>().Where(filter);
+        }
+
+  
+
+        public List<Comments> CommentAll()
+        {
+            return _context.Comments.Include(c => c.User).ToList();
         }
     }
-    
+
 }

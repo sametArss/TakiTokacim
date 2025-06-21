@@ -21,12 +21,9 @@ namespace DataAcsessLayer.EntityFramework
 
         public Product GetByIdWithCategory(int id)
         {
-            using (var context = _context)
-            {
-                return context.Products
-                    .Include(p => p.Category)
-                    .FirstOrDefault(p => p.ProductId == id);
-            }
+            return _context.Products
+                .Include(p => p.Category)
+                .FirstOrDefault(p => p.ProductId == id);
         }
     }
 }

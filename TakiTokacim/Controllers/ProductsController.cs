@@ -10,11 +10,13 @@ namespace TakiTokacim.Controllers
 
         private readonly IProductService _productService;
         private readonly ICategoryService _categoryService;
+        private readonly ICommentService _commentService;
         
-        public ProductsController(IProductService productService, ICategoryService categoryService)
+        public ProductsController(IProductService productService, ICategoryService categoryService,ICommentService commentService)
         {
             _productService = productService;
             _categoryService = categoryService;
+            _commentService = commentService;
         }
 
 
@@ -31,10 +33,13 @@ namespace TakiTokacim.Controllers
             return View(products);
         }
 
-        public  IActionResult Details(int id)
+        public IActionResult Details(int id)
         {
             var product = _productService.GetByIdProduct(id);
-            if (product == null) return NotFound();        
+            if (product == null) return NotFound();
+
+            var comments =_commentService.CommentAll().Where(x=>x.ProductId==id).ToList();
+            ViewBag.Comments = comments;
 
             return View(product);
         }

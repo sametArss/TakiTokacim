@@ -1,17 +1,21 @@
+@using EntitiyLayer.Models
 @model EntitiyLayer.Models.Product
 
+
 @{
-     ViewData["Title"] = Model.ProductName;
+    ViewData["Title"] = Model.ProductName;
     // Örnek çoklu görsel listesi
-     var images = new List<string>();
-     if (!string.IsNullOrEmpty(Model.ProductImage1)) images.Add(Model.ProductImage1);
-     if (!string.IsNullOrEmpty(Model.ProductImage2)) images.Add(Model.ProductImage2);
-     if (!string.IsNullOrEmpty(Model.ProductImage3)) images.Add(Model.ProductImage3);
-    //Örnek yorumlar
-     var comments = new List<dynamic> {
-         new { User = "Ayþe K.", Text = "Çok kaliteli ve þýk bir ürün!" },
-         new { User = "Mehmet T.", Text = "Hýzlý kargo, güzel paketleme. Tavsiye ederim." }
-     };
+    var images = new List<string>();
+    if (!string.IsNullOrEmpty(Model.ProductImage1)) images.Add(Model.ProductImage1);
+    if (!string.IsNullOrEmpty(Model.ProductImage2)) images.Add(Model.ProductImage2);
+    if (!string.IsNullOrEmpty(Model.ProductImage3)) images.Add(Model.ProductImage3);
+  //  Örnek yorumlar
+    // var comments = new List<dynamic> {
+    //     new { User = "Ayþe K.", Text = "Çok kaliteli ve þýk bir ürün!" },
+    //     new { User = "Mehmet T.", Text = "Hýzlý kargo, güzel paketleme. Tavsiye ederim." }
+    // };
+
+     var comments = ViewBag.Comments as List<Comments>;
 }
 
 
@@ -24,10 +28,10 @@
                     <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner rounded-4 shadow-sm">
                             @for (int i = 0; i < images.Count; i++) 
-                             { 
-                                 <div class="carousel-item @(i == 0 ? "active" : "")"> 
-                                     <img src=@images[i] class="d-block w-100" alt="@Model.ProductName" style="max-height:350px; object-fit:cover;"> 
-                                 </div> 
+                            { 
+                                <div class="carousel-item @(i == 0 ? "active" : "")"> 
+                                    <img src=@images[i] class="d-block w-100" alt="@Model.ProductName" style="max-height:350px; object-fit:cover;"> 
+                                </div> 
                             } 
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
@@ -56,12 +60,21 @@
             <div class="row">
                 <div class="col-md-8 mx-auto">
                     <h5 class="fw-bold mb-3" style="color:#e67e22;">Ürün Yorumlarý</h5>
-                     @foreach (var c in comments) 
-                     { 
-                         <div class="mb-2 p-2 bg-light rounded-3 shadow-sm"> 
-                           <strong>@c.User:</strong> @c.Text 
-                      </div> 
-                     } 
+                    @if (comments != null && comments.Any())
+                    {
+                        foreach (var c in comments)
+                        {
+                            <div class="mb-2 p-2 bg-light rounded-3 shadow-sm">
+                                <strong>@c.User.UserName:</strong> @c.Message
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        <div class="mb-2 p-2 bg-light rounded-3 shadow-sm">
+                            <strong>Ürüne Henüz Yorum Yapýlamamýþ</strong>
+                        </div>
+                    }
                     <form class="mt-4">
                         <div class="mb-2">
                             <textarea class="form-control" rows="2" placeholder="Yorumunuzu yazýn..."></textarea>

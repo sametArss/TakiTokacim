@@ -6,6 +6,7 @@ using DataAcsessLayer.Abstract;
 using DataAcsessLayer.Concrete.Repositories;
 using DataAcsessLayer.EntityFramework;
 using Microsoft.AspNetCore.Cors.Infrastructure;
+using Microsoft.Extensions.Options;
 var builder = WebApplication.CreateBuilder(args);
 
 // appsettings.json'daki connection string'i oku
@@ -13,7 +14,11 @@ string connectionString = builder.Configuration.GetConnectionString("DefaultConn
 
 // DbContext'i servislere ekle
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(connectionString));
+{
+    options.UseSqlServer(connectionString);
+    options.UseLazyLoadingProxies(false);
+});
+
 
 // Generic Repository
 builder.Services.AddScoped(typeof(IGenericRepositoriesDal<>), typeof(GenericRepositoriesDal<>));
@@ -35,6 +40,7 @@ builder.Services.AddScoped<IUserAdressDal, EFUserAdressDal>();
 // Service Katmaný
 builder.Services.AddScoped<IProductService, ProductManager>();
 builder.Services.AddScoped<ICategoryService, CategoryManager>();
+builder.Services.AddScoped<ICommentService, CommentManager>();
 
 
 
