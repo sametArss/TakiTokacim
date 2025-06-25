@@ -1,0 +1,96 @@
+@using EntitiyLayer.Models
+@model EntitiyLayer.Models.Product
+
+
+@{
+    ViewData["Title"] = Model.ProductName;
+   
+    var images = new List<string>();
+    if (!string.IsNullOrEmpty(Model.ProductImage1)) images.Add(Model.ProductImage1);
+    if (!string.IsNullOrEmpty(Model.ProductImage2)) images.Add(Model.ProductImage2);
+    if (!string.IsNullOrEmpty(Model.ProductImage3)) images.Add(Model.ProductImage3);
+ 
+     var comments = ViewBag.Comments as List<Comments>;
+}
+
+
+<div class="row justify-content-center mt-5">
+    <div class="col-lg-10">
+        <div class="card border-0 shadow-lg p-4">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6">
+                    <!-- Bootstrap Carousel ile kayd�rmal� g�rseller -->
+                    <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner rounded-4 shadow-sm">
+                            @for (int i = 0; i < images.Count; i++) 
+                            { 
+                                <div class="carousel-item @(i == 0 ? "active" : "")"> 
+                                    <img src=@images[i] class="d-block w-100" alt="@Model.ProductName" style="max-height:350px; object-fit:cover;"> 
+                                </div> 
+                            } 
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">�nceki</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Sonraki</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="fw-bold mb-2" style="color:#e67e22;">@Model.ProductName</h2>
+                    <div class="mb-2 text-muted">@Model.Category.CategoryName</div>
+                    <div class="mb-3" style="font-size:1.3rem; color:#e67e22; font-weight:600;">@Model.ProductPrice TL</div>
+                    <p class="mb-4">@Model.ProductDescription</p>
+                    <form class="d-flex align-items-center mb-3" style="gap:10px;">
+                        <label class="form-label mb-0">Adet:</label>
+                        <input type="number" class="form-control" value="1" min="1" style="width:80px;">
+                        <button type="submit" class="btn btn-warning px-4" style="background:#e67e22; border:none;">Sepete Ekle</button>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <h5 class="fw-bold mb-3" style="color:#e67e22;">Ürün Yorumları</h5>
+                    @if (comments != null && comments.Any())
+                    {
+                        foreach (var c in comments)
+                        {
+                            <div class="mb-2 p-2 bg-light rounded-3 shadow-sm">
+                                <strong>@c.User.UserName:</strong> @c.Message
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        <div class="mb-2 p-2 bg-light rounded-3 shadow-sm">
+                            <strong>
+                            Ürüne Henüz Yorum Yapılamamış</strong>
+                        </div>
+                    }
+                    @if (TempData["CommentSuccess"] != null)
+                    {
+                        <div class="alert alert-success">@TempData["CommentSuccess"]</div>
+                    }
+                    @if (TempData["CommentError"] != null)
+                    {
+                        <div class="alert alert-danger">@TempData["CommentError"]</div>
+                    }
+                    <form asp-action="AddComment" asp-controller="Comments" method="post" class="mt-4">
+                        <input type="hidden" name="productId" value="@Model.ProductId" />
+                        <div class="mb-2">
+                            <input type="text" name="subject" class="form-control" maxlength="200" placeholder="Konu (isteğe bağlı)" />
+                        </div>
+                        <div class="mb-2">
+                            <textarea name="message" class="form-control" rows="2" maxlength="500" placeholder="Yorumunuzu yazın..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-outline-warning">Yorum Gönder</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

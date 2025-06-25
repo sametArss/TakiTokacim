@@ -1,0 +1,23 @@
+@model EntitiyLayer.Models.Category
+@{
+    ViewData["Title"] = "Kategori Sil";
+}
+<div class="container mt-4">
+    <h2>Kategori Sil</h2>
+    <div class="alert alert-warning">Bu kategoriyi silmek istediğinize emin misiniz?</div>
+    <dl class="row">
+        <dt class="col-sm-2">Adı</dt>
+        <dd class="col-sm-10">@Model.CategoryName</dd>
+        <dt class="col-sm-2">Açıklama</dt>
+        <dd class="col-sm-10">@Model.CategoryDescription</dd>
+        <dt class="col-sm-2">Durum</dt>
+        <dd class="col-sm-10">
+            @if(Model.CategoryStatus) { <span class="badge bg-success">Aktif</span> } else { <span class="badge bg-danger">Pasif</span> }
+        </dd>
+    </dl>
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="CategoryId" />
+        <button type="submit" class="btn btn-danger">Sil</button>
+        <a asp-action="Index" class="btn btn-secondary ms-2">Geri Dön</a>
+    </form>
+</div> 

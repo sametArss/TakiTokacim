@@ -1,0 +1,35 @@
+@model List<EntitiyLayer.Models.Comments>
+@{
+    ViewData["Title"] = "Onay Bekleyen Yorumlar";
+}
+<h2>Onay Bekleyen Yorumlar</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Kullanıcı</th>
+            <th>Ürün</th>
+            <th>Konu</th>
+            <th>Yorum</th>
+            <th>Tarih</th>
+            <th>İşlem</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var c in Model)
+        {
+            <tr>
+                <td>@c.User?.UserName</td>
+                <td>@c.Product?.ProductName</td>
+                <td>@c.Subject</td>
+                <td>@c.Message</td>
+                <td>@c.CommentDate.ToString("g")</td>
+                <td>
+                    <form asp-action="Approve" method="post" style="display:inline;">
+                        <input type="hidden" name="id" value="@c.CommentId" />
+                        <button type="submit" class="btn btn-success btn-sm">Onayla</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table> 

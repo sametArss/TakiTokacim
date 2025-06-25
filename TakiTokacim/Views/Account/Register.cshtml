@@ -1,0 +1,41 @@
+@model TakiTokacim.Models.RegisterViewModel
+@{
+    ViewData["Title"] = "Kayıt Ol";
+}
+<div class="row justify-content-center mt-5">
+    <div class="col-md-5">
+        <div class="card border-0 shadow-lg p-4">
+            <h2 class="fw-bold mb-4 text-center" style="color:#e67e22;">Kayıt Ol</h2>
+            <form asp-action="Register" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="mb-3">
+                    <label asp-for="UserLName" class="form-label"></label>
+                    <input asp-for="UserLName" class="form-control" />
+                    <span asp-validation-for="UserLName" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Email" class="form-label"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Password" class="form-label"></label>
+                    <input asp-for="Password" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="ConfirmPassword" class="form-label"></label>
+                    <input asp-for="ConfirmPassword" class="form-control" />
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                </div>
+                <button type="submit" class="btn btn-warning w-100" style="background:#e67e22; border:none;">Kayıt Ol</button>
+            </form>
+            <div class="mt-3 text-center">
+                <span>Zaten hesabınız var mı? <a href="/Account/Login" style="color:#e67e22;">Giriş Yap</a></span>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+} 

@@ -1,0 +1,143 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{60389EEC-179F-4187-9AFB-A91F6C6F6FAD}|BusiniessLayer\\BusiniessLayer.csproj|c:\\users\\samet\\desktop\\takitokacimeski\\businiesslayer\\concrete\\commentmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60389EEC-179F-4187-9AFB-A91F6C6F6FAD}|BusiniessLayer\\BusiniessLayer.csproj|solutionrelative:businiesslayer\\concrete\\commentmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B69163-B954-4D94-88E1-3429993563A1}|TakiTokacim\\TakiTokacim.csproj|c:\\users\\samet\\desktop\\takitokacimeski\\takitokacim\\views\\comments\\pendings.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F8B69163-B954-4D94-88E1-3429993563A1}|TakiTokacim\\TakiTokacim.csproj|solutionrelative:takitokacim\\views\\comments\\pendings.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B69163-B954-4D94-88E1-3429993563A1}|TakiTokacim\\TakiTokacim.csproj|c:\\users\\samet\\desktop\\takitokacimeski\\takitokacim\\controllers\\commentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8B69163-B954-4D94-88E1-3429993563A1}|TakiTokacim\\TakiTokacim.csproj|solutionrelative:takitokacim\\controllers\\commentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B69163-B954-4D94-88E1-3429993563A1}|TakiTokacim\\TakiTokacim.csproj|c:\\users\\samet\\desktop\\takitokacimeski\\takitokacim\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F8B69163-B954-4D94-88E1-3429993563A1}|TakiTokacim\\TakiTokacim.csproj|solutionrelative:takitokacim\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B69163-B954-4D94-88E1-3429993563A1}|TakiTokacim\\TakiTokacim.csproj|c:\\users\\samet\\desktop\\takitokacimeski\\takitokacim\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F8B69163-B954-4D94-88E1-3429993563A1}|TakiTokacim\\TakiTokacim.csproj|solutionrelative:takitokacim\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B69163-B954-4D94-88E1-3429993563A1}|TakiTokacim\\TakiTokacim.csproj|c:\\users\\samet\\desktop\\takitokacimeski\\takitokacim\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8B69163-B954-4D94-88E1-3429993563A1}|TakiTokacim\\TakiTokacim.csproj|solutionrelative:takitokacim\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B69163-B954-4D94-88E1-3429993563A1}|TakiTokacim\\TakiTokacim.csproj|c:\\users\\samet\\desktop\\takitokacimeski\\takitokacim\\views\\products\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F8B69163-B954-4D94-88E1-3429993563A1}|TakiTokacim\\TakiTokacim.csproj|solutionrelative:takitokacim\\views\\products\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\TakiTokacim\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "TakiTokacim\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\TakiTokacim\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "TakiTokacim\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAAAGsAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-25T19:28:16.232Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_AdminLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\TakiTokacim\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeDocumentMoniker": "TakiTokacim\\Views\\Shared\\_AdminLayout.cshtml",
+              "ToolTip": "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\TakiTokacim\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeToolTip": "TakiTokacim\\Views\\Shared\\_AdminLayout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-25T19:28:15.306Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CommentManager.cs",
+              "DocumentMoniker": "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\BusiniessLayer\\Concrete\\CommentManager.cs",
+              "RelativeDocumentMoniker": "BusiniessLayer\\Concrete\\CommentManager.cs",
+              "ToolTip": "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\BusiniessLayer\\Concrete\\CommentManager.cs",
+              "RelativeToolTip": "BusiniessLayer\\Concrete\\CommentManager.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBwAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T19:26:35.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Pendings.cshtml",
+              "DocumentMoniker": "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\TakiTokacim\\Views\\Comments\\Pendings.cshtml",
+              "RelativeDocumentMoniker": "TakiTokacim\\Views\\Comments\\Pendings.cshtml",
+              "ToolTip": "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\TakiTokacim\\Views\\Comments\\Pendings.cshtml",
+              "RelativeToolTip": "TakiTokacim\\Views\\Comments\\Pendings.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABUAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-25T19:21:29.319Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CommentsController.cs",
+              "DocumentMoniker": "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\TakiTokacim\\Controllers\\CommentsController.cs",
+              "RelativeDocumentMoniker": "TakiTokacim\\Controllers\\CommentsController.cs",
+              "ToolTip": "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\TakiTokacim\\Controllers\\CommentsController.cs",
+              "RelativeToolTip": "TakiTokacim\\Controllers\\CommentsController.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAYwDUAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T19:13:07.976Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\TakiTokacim\\Views\\Products\\Details.cshtml",
+              "RelativeDocumentMoniker": "TakiTokacim\\Views\\Products\\Details.cshtml",
+              "ToolTip": "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\TakiTokacim\\Views\\Products\\Details.cshtml",
+              "RelativeToolTip": "TakiTokacim\\Views\\Products\\Details.cshtml",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAFEAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-25T19:12:42.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\TakiTokacim\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "TakiTokacim\\Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\TakiTokacim\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "TakiTokacim\\Controllers\\ProductsController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAYwCMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T19:12:34.913Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

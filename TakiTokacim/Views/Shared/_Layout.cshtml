@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - TakiTokacim</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site2.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/TakiTokacim.styles.css" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(120deg, #fff8f0 0%, #ffe5d0 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .navbar-custom {
+            background: linear-gradient(90deg, #e67e22 60%, #f6c667 100%);
+            box-shadow: 0 4px 24px 0 rgba(230,126,34,0.10);
+        }
+        .brand-logo {
+            width: 48px; height: 48px; margin-right: 12px;
+        }
+        .navbar-brand {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #fff !important;
+            display: flex; align-items: center;
+        }
+        .nav-link {
+            color: #fff !important;
+            font-weight: 500;
+            font-size: 1.1rem;
+            margin-right: 8px;
+            transition: color 0.2s;
+        }
+        .nav-link.active, .nav-link:hover {
+            color: #222 !important;
+        }
+        .user-menu {
+            position: relative;
+        }
+        .user-menu .dropdown-menu {
+            right: 0;
+            left: auto;
+        }
+        .user-icon {
+            width: 32px; height: 32px; border-radius: 50%; background: #fff3e0; display: flex; align-items: center; justify-content: center;
+            border: 2px solid #fff; color: #e67e22; font-size: 1.3rem;
+        }
+        footer {
+            background: #222; color: #fff; padding: 20px 0;
+            margin-top: auto;
+        }
+        .footer-link { color: #e67e22; text-decoration: none; }
+        .footer-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-custom py-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <svg class="brand-logo" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <radialGradient id="goldGradient" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#fffbe6"/>
+                                <stop offset="60%" stop-color="#ffe082"/>
+                                <stop offset="100%" stop-color="#e6b800"/>
+                            </radialGradient>
+                            <linearGradient id="shine" x1="0" y1="0" x2="60" y2="60" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#fff" stop-opacity="0.7"/>
+                                <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+                            </linearGradient>
+                        </defs>
+                        <circle cx="30" cy="30" r="28" fill="url(#goldGradient)" stroke="#e67e22" stroke-width="3"/>
+                        <ellipse cx="30" cy="32" rx="15" ry="20" fill="#fffbe6" stroke="#e6b800" stroke-width="2"/>
+                        <path d="M30 13L39 32H21L30 13Z" fill="#e6b800" stroke="#e67e22" stroke-width="1.5"/>
+                        <circle cx="30" cy="38" r="6" fill="#fff" stroke="#e6b800" stroke-width="2"/>
+                        <ellipse cx="30" cy="38" rx="3" ry="2" fill="#ffe082"/>
+                        <path d="M30 8 Q32 18 40 18" stroke="#e6b800" stroke-width="2" fill="none"/>
+                        <path d="M30 8 Q28 18 20 18" stroke="#e6b800" stroke-width="2" fill="none"/>
+                        <text x="30" y="48" text-anchor="middle" font-size="13" font-family="Montserrat, Arial" fill="#e67e22" font-weight="bold">TT</text>
+                        <ellipse cx="40" cy="18" rx="2" ry="1" fill="url(#shine)"/>
+                        <ellipse cx="20" cy="18" rx="2" ry="1" fill="url(#shine)"/>
+                    </svg>
+                    TakiTokacim
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                  <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+    <li class="nav-item">
+        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Ana Sayfa</a>
+    </li>
+    @if(User.IsInRole("Admin")){
+    <li class="nav-item">
+        <a class="nav-link" asp-area="" asp-controller="Categories" asp-action="Index">Kategoriler</a>
+    </li>
+    <li class="nav-item">
+         <a class="nav-link" asp-area="" asp-controller="Comments" asp-action="Pendings">Onay Bekleyen Yorumlar </a>
+    </li>
+                        }
+    <li class="nav-item">
+        <a class="nav-link" asp-area="" asp-controller="Products" asp-action="Index">Ürünler</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" asp-area="" asp-controller="Cart" asp-action="Index">Sepet</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="About">Hakkımızda</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Contact">İletişim</a>
+    </li>
+    <li class="nav-item user-menu dropdown">
+        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="user-icon me-2"><svg width="20" height="20" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="#e67e22"/><path d="M4 20c0-4 16-4 16 0" stroke="#e67e22" stroke-width="2"/></svg></span>
+            Hesabım
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="MyAccount">Hesap Bilgilerim</a></li>
+    <li>
+        <form asp-controller="Account" asp-action="Logout" method="post" style="margin:0; padding:0;">
+            <button type="submit" class="dropdown-item" style="background:none; border:none; width:100%; text-align:left; color:#212529; cursor:pointer;">Çıkış Yap</button>
+        </form>
+    </li>
+</ul> 
+    </li>
+</ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container mt-4">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <footer class="mt-5">
+        <div class="container text-center">
+            <div class="mb-2">
+                <a class="footer-link" asp-area="" asp-controller="Home" asp-action="Index">Ana Sayfa</a> |
+                <a class="footer-link" asp-area="" asp-controller="Products" asp-action="Index">Ürünler</a> |
+                <a class="footer-link" asp-area="" asp-controller="Home" asp-action="About">Hakkımızda</a> |
+                <a class="footer-link" asp-area="" asp-controller="Home" asp-action="Contact">İletişim</a>
+            </div>
+            <div>&copy; 2025 - TakiTokacim. Tüm hakları saklıdır.</div>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

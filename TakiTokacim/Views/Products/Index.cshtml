@@ -1,0 +1,50 @@
+@using EntitiyLayer.Models
+@model List<Product>
+
+@{
+    ViewData["Title"] = "Ürünler";
+    var categories = ViewBag.Categories as List<Category>; // artık sabit liste değil
+    var selected = ViewBag.SelectedCategory as string;
+}
+
+<div class="row mb-4">
+    <div class="col-12 text-center">
+        <h1 class="fw-bold" style="color:#e67e22;">Ürün Kataloğu</h1>
+        <div class="btn-group mt-3" role="group">
+            <a href="/Products" class="btn btn-outline-warning @(string.IsNullOrEmpty(selected) ? "active" : "")">Tümü</a>
+            @foreach (var cat in categories)
+            {
+                <a href="/Products?category=@cat.CategoryName" class="btn btn-outline-warning @(selected == cat.CategoryName ? "active" : "")">@cat.CategoryName</a>
+            }
+        </div>
+    </div>
+</div>
+
+<div class="row g-4">
+    @foreach (var product in Model)
+    {
+        <div class="col-md-3">
+            <div class="card h-100 border-0 shadow-sm">
+                <img src="@product.ProductImage1" class="card-img-top" alt="@product.ProductName">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">@product.ProductName</h5>
+                    <p class="card-text text-muted">@product.Category.CategoryName</p>
+                    <div class="mt-auto">
+                        <div class="fw-bold mb-2" style="color:#e67e22; font-size:1.2rem;">@product.ProductPrice TL</div>
+                        <a href="/Products/Details/@product.ProductId" class="btn btn-outline-warning w-100">İncele</a>
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <div class="d-flex gap-2 mt-2">
+                                <a href="/Products/Edit/@product.ProductId" class="btn btn-outline-success w-50">Düzenle</a>
+                                <a href="/Products/Delete/@product.ProductId" class="btn btn-outline-danger w-50">Sil</a>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+     @if(User.IsInRole("Admin")){
+    <a href="/Products/Create" class="btn btn-outline-primary w-100">Yeni Ürün Ekle</a>
+     }
+</div>
