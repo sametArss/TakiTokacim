@@ -1,7 +1,72 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B69163-B954-4D94-88E1-3429993563A1}|TakiTokacim\\TakiTokacim.csproj|c:\\users\\samet\\desktop\\takitokacim\\takitokacim\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8B69163-B954-4D94-88E1-3429993563A1}|TakiTokacim\\TakiTokacim.csproj|solutionrelative:takitokacim\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B69163-B954-4D94-88E1-3429993563A1}|TakiTokacim\\TakiTokacim.csproj|c:\\users\\samet\\desktop\\takitokacim\\takitokacim\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8B69163-B954-4D94-88E1-3429993563A1}|TakiTokacim\\TakiTokacim.csproj|solutionrelative:takitokacim\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B69163-B954-4D94-88E1-3429993563A1}|TakiTokacim\\TakiTokacim.csproj|c:\\users\\samet\\desktop\\takitokacim\\takitokacim\\views\\account\\myaccount.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F8B69163-B954-4D94-88E1-3429993563A1}|TakiTokacim\\TakiTokacim.csproj|solutionrelative:takitokacim\\views\\account\\myaccount.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60389EEC-179F-4187-9AFB-A91F6C6F6FAD}|BusiniessLayer\\BusiniessLayer.csproj|c:\\users\\samet\\desktop\\takitokacim\\businiesslayer\\concrete\\adressmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60389EEC-179F-4187-9AFB-A91F6C6F6FAD}|BusiniessLayer\\BusiniessLayer.csproj|solutionrelative:businiesslayer\\concrete\\adressmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B69163-B954-4D94-88E1-3429993563A1}|TakiTokacim\\TakiTokacim.csproj|c:\\users\\samet\\desktop\\takitokacim\\takitokacim\\controllers\\adresscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8B69163-B954-4D94-88E1-3429993563A1}|TakiTokacim\\TakiTokacim.csproj|solutionrelative:takitokacim\\controllers\\adresscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60389EEC-179F-4187-9AFB-A91F6C6F6FAD}|BusiniessLayer\\BusiniessLayer.csproj|c:\\users\\samet\\desktop\\takitokacim\\businiesslayer\\concrete\\commentmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60389EEC-179F-4187-9AFB-A91F6C6F6FAD}|BusiniessLayer\\BusiniessLayer.csproj|solutionrelative:businiesslayer\\concrete\\commentmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60389EEC-179F-4187-9AFB-A91F6C6F6FAD}|BusiniessLayer\\BusiniessLayer.csproj|c:\\users\\samet\\desktop\\takitokacim\\businiesslayer\\concrete\\productmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60389EEC-179F-4187-9AFB-A91F6C6F6FAD}|BusiniessLayer\\BusiniessLayer.csproj|solutionrelative:businiesslayer\\concrete\\productmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B69163-B954-4D94-88E1-3429993563A1}|TakiTokacim\\TakiTokacim.csproj|c:\\users\\samet\\desktop\\takitokacim\\takitokacim\\views\\adress\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F8B69163-B954-4D94-88E1-3429993563A1}|TakiTokacim\\TakiTokacim.csproj|solutionrelative:takitokacim\\views\\adress\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B69163-B954-4D94-88E1-3429993563A1}|TakiTokacim\\TakiTokacim.csproj|c:\\users\\samet\\desktop\\takitokacim\\takitokacim\\views\\adress\\addadress.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F8B69163-B954-4D94-88E1-3429993563A1}|TakiTokacim\\TakiTokacim.csproj|solutionrelative:takitokacim\\views\\adress\\addadress.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60389EEC-179F-4187-9AFB-A91F6C6F6FAD}|BusiniessLayer\\BusiniessLayer.csproj|c:\\users\\samet\\desktop\\takitokacim\\businiesslayer\\abstract\\iadressservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60389EEC-179F-4187-9AFB-A91F6C6F6FAD}|BusiniessLayer\\BusiniessLayer.csproj|solutionrelative:businiesslayer\\abstract\\iadressservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{628DBB2E-4741-4756-8E0D-656DCFA7C9A0}|EntitiyLayer\\EntitiyLayer.csproj|c:\\users\\samet\\desktop\\takitokacim\\entitiylayer\\models\\useradress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{628DBB2E-4741-4756-8E0D-656DCFA7C9A0}|EntitiyLayer\\EntitiyLayer.csproj|solutionrelative:entitiylayer\\models\\useradress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B69163-B954-4D94-88E1-3429993563A1}|TakiTokacim\\TakiTokacim.csproj|c:\\users\\samet\\desktop\\takitokacim\\takitokacim\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F8B69163-B954-4D94-88E1-3429993563A1}|TakiTokacim\\TakiTokacim.csproj|solutionrelative:takitokacim\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B69163-B954-4D94-88E1-3429993563A1}|TakiTokacim\\TakiTokacim.csproj|c:\\users\\samet\\desktop\\takitokacim\\takitokacim\\views\\account\\addadress.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F8B69163-B954-4D94-88E1-3429993563A1}|TakiTokacim\\TakiTokacim.csproj|solutionrelative:takitokacim\\views\\account\\addadress.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60389EEC-179F-4187-9AFB-A91F6C6F6FAD}|BusiniessLayer\\BusiniessLayer.csproj|c:\\users\\samet\\desktop\\takitokacim\\businiesslayer\\businiesslayer.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{60389EEC-179F-4187-9AFB-A91F6C6F6FAD}|BusiniessLayer\\BusiniessLayer.csproj|solutionrelative:businiesslayer\\businiesslayer.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60389EEC-179F-4187-9AFB-A91F6C6F6FAD}|BusiniessLayer\\BusiniessLayer.csproj|c:\\users\\samet\\desktop\\takitokacim\\businiesslayer\\abstract\\icityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60389EEC-179F-4187-9AFB-A91F6C6F6FAD}|BusiniessLayer\\BusiniessLayer.csproj|solutionrelative:businiesslayer\\abstract\\icityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60389EEC-179F-4187-9AFB-A91F6C6F6FAD}|BusiniessLayer\\BusiniessLayer.csproj|c:\\users\\samet\\desktop\\takitokacim\\businiesslayer\\concrete\\citymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60389EEC-179F-4187-9AFB-A91F6C6F6FAD}|BusiniessLayer\\BusiniessLayer.csproj|solutionrelative:businiesslayer\\concrete\\citymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +74,211 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 6,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\TakiTokacim\\Program.cs",
+              "RelativeDocumentMoniker": "TakiTokacim\\Program.cs",
+              "ToolTip": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\TakiTokacim\\Program.cs",
+              "RelativeToolTip": "TakiTokacim\\Program.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T09:32:33.714Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\TakiTokacim\\Views\\Adress\\Edit.cshtml",
+              "RelativeDocumentMoniker": "TakiTokacim\\Views\\Adress\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\TakiTokacim\\Views\\Adress\\Edit.cshtml",
+              "RelativeToolTip": "TakiTokacim\\Views\\Adress\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-26T11:26:12.164Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AdressManager.cs",
+              "DocumentMoniker": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\BusiniessLayer\\Concrete\\AdressManager.cs",
+              "RelativeDocumentMoniker": "BusiniessLayer\\Concrete\\AdressManager.cs",
+              "ToolTip": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\BusiniessLayer\\Concrete\\AdressManager.cs",
+              "RelativeToolTip": "BusiniessLayer\\Concrete\\AdressManager.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwB0AAABfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T11:21:28.093Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CommentManager.cs",
+              "DocumentMoniker": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\BusiniessLayer\\Concrete\\CommentManager.cs",
+              "RelativeDocumentMoniker": "BusiniessLayer\\Concrete\\CommentManager.cs",
+              "ToolTip": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\BusiniessLayer\\Concrete\\CommentManager.cs",
+              "RelativeToolTip": "BusiniessLayer\\Concrete\\CommentManager.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBUAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T11:07:07.891Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AdressController.cs",
+              "DocumentMoniker": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\TakiTokacim\\Controllers\\AdressController.cs",
+              "RelativeDocumentMoniker": "TakiTokacim\\Controllers\\AdressController.cs",
+              "ToolTip": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\TakiTokacim\\Controllers\\AdressController.cs",
+              "RelativeToolTip": "TakiTokacim\\Controllers\\AdressController.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAIwGwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T11:20:28.051Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\TakiTokacim\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "TakiTokacim\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\TakiTokacim\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "TakiTokacim\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAwE4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T10:59:52.502Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MyAccount.cshtml",
+              "DocumentMoniker": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\TakiTokacim\\Views\\Account\\MyAccount.cshtml",
+              "RelativeDocumentMoniker": "TakiTokacim\\Views\\Account\\MyAccount.cshtml",
+              "ToolTip": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\TakiTokacim\\Views\\Account\\MyAccount.cshtml",
+              "RelativeToolTip": "TakiTokacim\\Views\\Account\\MyAccount.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACAAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-26T07:14:22.216Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AddAdress.cshtml",
+              "DocumentMoniker": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\TakiTokacim\\Views\\Adress\\AddAdress.cshtml",
+              "RelativeDocumentMoniker": "TakiTokacim\\Views\\Adress\\AddAdress.cshtml",
+              "ToolTip": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\TakiTokacim\\Views\\Adress\\AddAdress.cshtml",
+              "RelativeToolTip": "TakiTokacim\\Views\\Adress\\AddAdress.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-26T10:59:07.21Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProductManager.cs",
+              "DocumentMoniker": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\BusiniessLayer\\Concrete\\ProductManager.cs",
+              "RelativeDocumentMoniker": "BusiniessLayer\\Concrete\\ProductManager.cs",
+              "ToolTip": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\BusiniessLayer\\Concrete\\ProductManager.cs",
+              "RelativeToolTip": "BusiniessLayer\\Concrete\\ProductManager.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAYwBcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T06:48:02.906Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IAdressService.cs",
+              "DocumentMoniker": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\BusiniessLayer\\Abstract\\IAdressService.cs",
+              "RelativeDocumentMoniker": "BusiniessLayer\\Abstract\\IAdressService.cs",
+              "ToolTip": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\BusiniessLayer\\Abstract\\IAdressService.cs",
+              "RelativeToolTip": "BusiniessLayer\\Abstract\\IAdressService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T10:51:54.196Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UserAdress.cs",
+              "DocumentMoniker": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\EntitiyLayer\\Models\\UserAdress.cs",
+              "RelativeDocumentMoniker": "EntitiyLayer\\Models\\UserAdress.cs",
+              "ToolTip": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\EntitiyLayer\\Models\\UserAdress.cs",
+              "RelativeToolTip": "EntitiyLayer\\Models\\UserAdress.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAwBQAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T11:13:02.914Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CityManager.cs",
+              "DocumentMoniker": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\BusiniessLayer\\Concrete\\CityManager.cs",
+              "RelativeDocumentMoniker": "BusiniessLayer\\Concrete\\CityManager.cs",
+              "ToolTip": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\BusiniessLayer\\Concrete\\CityManager.cs",
+              "RelativeToolTip": "BusiniessLayer\\Concrete\\CityManager.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABUAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T07:27:32.81Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\TakiTokacim\\Views\\Products\\Index.cshtml",
+              "RelativeDocumentMoniker": "TakiTokacim\\Views\\Products\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\TakiTokacim\\Views\\Products\\Index.cshtml",
+              "RelativeToolTip": "TakiTokacim\\Views\\Products\\Index.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-26T06:48:15.77Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ICityService.cs",
+              "DocumentMoniker": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\BusiniessLayer\\Abstract\\ICityService.cs",
+              "RelativeDocumentMoniker": "BusiniessLayer\\Abstract\\ICityService.cs",
+              "ToolTip": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\BusiniessLayer\\Abstract\\ICityService.cs",
+              "RelativeToolTip": "BusiniessLayer\\Abstract\\ICityService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T09:32:45.435Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "BusiniessLayer.csproj",
+              "DocumentMoniker": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\BusiniessLayer\\BusiniessLayer.csproj",
+              "RelativeDocumentMoniker": "BusiniessLayer\\BusiniessLayer.csproj",
+              "ToolTip": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\BusiniessLayer\\BusiniessLayer.csproj",
+              "RelativeToolTip": "BusiniessLayer\\BusiniessLayer.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-26T09:32:59.912Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AddAdress.cshtml",
+              "DocumentMoniker": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\TakiTokacim\\Views\\Account\\AddAdress.cshtml",
+              "RelativeDocumentMoniker": "TakiTokacim\\Views\\Account\\AddAdress.cshtml",
+              "ToolTip": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\TakiTokacim\\Views\\Account\\AddAdress.cshtml",
+              "RelativeToolTip": "TakiTokacim\\Views\\Account\\AddAdress.cshtml",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAcwDkAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-26T09:52:40.404Z"
             }
           ]
         }

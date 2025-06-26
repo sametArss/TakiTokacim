@@ -4595,11 +4595,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\EntitiyLayer\\EntitiyLayer.csproj",
+      "projectUniqueName": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\EntitiyLayer\\EntitiyLayer.csproj",
       "projectName": "EntitiyLayer",
-      "projectPath": "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\EntitiyLayer\\EntitiyLayer.csproj",
+      "projectPath": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\EntitiyLayer\\EntitiyLayer.csproj",
       "packagesPath": "C:\\Users\\Samet\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\EntitiyLayer\\obj\\",
+      "outputPath": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\EntitiyLayer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -55,6 +55,9 @@ builder.Services.AddScoped<IProductService, ProductManager>();
 builder.Services.AddScoped<ICategoryService, CategoryManager>();
 builder.Services.AddScoped<ICommentService, CommentManager>();
 builder.Services.AddScoped<IUserService, UserManager>();
+builder.Services.AddScoped<ICityService,CityManager>();     
+builder.Services.AddScoped<IDistrictService, DistrictManager>();
+builder.Services.AddScoped<IAdressService, AdressManager>();
 
 
 var cultureInfo = new CultureInfo("tr-TR");

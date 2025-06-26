@@ -11,7 +11,7 @@ namespace BusiniessLayer.Abstract
     {
         void Insert(User user);
         void Update(User user);
-        
+        string GetUserId(System.Security.Claims.ClaimsPrincipal user);
         void Delete(User user);
         
     }

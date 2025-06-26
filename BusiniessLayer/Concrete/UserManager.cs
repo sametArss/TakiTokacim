@@ -23,6 +23,11 @@ namespace BusiniessLayer.Concrete
             throw new NotImplementedException();
         }
 
+        public string GetUserId(System.Security.Claims.ClaimsPrincipal user)
+        {
+            return user.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+        }
+
         public void Insert(User user)
         {
             throw new NotImplementedException();

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\TakiTokacim\\TakiTokacim.csproj": {}
+    "C:\\Users\\Samet\\Desktop\\TakiTokacim\\TakiTokacim\\TakiTokacim.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\BusiniessLayer\\BusiniessLayer.csproj": {
+    "C:\\Users\\Samet\\Desktop\\TakiTokacim\\BusiniessLayer\\BusiniessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\BusiniessLayer\\BusiniessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\BusiniessLayer\\BusiniessLayer.csproj",
         "projectName": "BusiniessLayer",
-        "projectPath": "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\BusiniessLayer\\BusiniessLayer.csproj",
+        "projectPath": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\BusiniessLayer\\BusiniessLayer.csproj",
         "packagesPath": "C:\\Users\\Samet\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\BusiniessLayer\\obj\\",
+        "outputPath": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\BusiniessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,11 +33,11 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\DataAcsessLayer\\DataAcsessLayer.csproj": {
-                "projectPath": "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\DataAcsessLayer\\DataAcsessLayer.csproj"
+              "C:\\Users\\Samet\\Desktop\\TakiTokacim\\DataAcsessLayer\\DataAcsessLayer.csproj": {
+                "projectPath": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\DataAcsessLayer\\DataAcsessLayer.csproj"
               },
-              "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\EntitiyLayer\\EntitiyLayer.csproj": {
-                "projectPath": "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\EntitiyLayer\\EntitiyLayer.csproj"
+              "C:\\Users\\Samet\\Desktop\\TakiTokacim\\EntitiyLayer\\EntitiyLayer.csproj": {
+                "projectPath": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\EntitiyLayer\\EntitiyLayer.csproj"
               }
             }
           }
@@ -77,14 +77,14 @@
         }
       }
     },
-    "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\DataAcsessLayer\\DataAcsessLayer.csproj": {
+    "C:\\Users\\Samet\\Desktop\\TakiTokacim\\DataAcsessLayer\\DataAcsessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\DataAcsessLayer\\DataAcsessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\DataAcsessLayer\\DataAcsessLayer.csproj",
         "projectName": "DataAcsessLayer",
-        "projectPath": "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\DataAcsessLayer\\DataAcsessLayer.csproj",
+        "projectPath": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\DataAcsessLayer\\DataAcsessLayer.csproj",
         "packagesPath": "C:\\Users\\Samet\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\DataAcsessLayer\\obj\\",
+        "outputPath": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\DataAcsessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -106,8 +106,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\EntitiyLayer\\EntitiyLayer.csproj": {
-                "projectPath": "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\EntitiyLayer\\EntitiyLayer.csproj"
+              "C:\\Users\\Samet\\Desktop\\TakiTokacim\\EntitiyLayer\\EntitiyLayer.csproj": {
+                "projectPath": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\EntitiyLayer\\EntitiyLayer.csproj"
               }
             }
           }
@@ -163,14 +163,14 @@
         }
       }
     },
-    "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\EntitiyLayer\\EntitiyLayer.csproj": {
+    "C:\\Users\\Samet\\Desktop\\TakiTokacim\\EntitiyLayer\\EntitiyLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\EntitiyLayer\\EntitiyLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\EntitiyLayer\\EntitiyLayer.csproj",
         "projectName": "EntitiyLayer",
-        "projectPath": "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\EntitiyLayer\\EntitiyLayer.csproj",
+        "projectPath": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\EntitiyLayer\\EntitiyLayer.csproj",
         "packagesPath": "C:\\Users\\Samet\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\EntitiyLayer\\obj\\",
+        "outputPath": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\EntitiyLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -239,14 +239,14 @@
         }
       }
     },
-    "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\TakiTokacim\\TakiTokacim.csproj": {
+    "C:\\Users\\Samet\\Desktop\\TakiTokacim\\TakiTokacim\\TakiTokacim.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\TakiTokacim\\TakiTokacim.csproj",
+        "projectUniqueName": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\TakiTokacim\\TakiTokacim.csproj",
         "projectName": "TakiTokacim",
-        "projectPath": "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\TakiTokacim\\TakiTokacim.csproj",
+        "projectPath": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\TakiTokacim\\TakiTokacim.csproj",
         "packagesPath": "C:\\Users\\Samet\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\TakiTokacim\\obj\\",
+        "outputPath": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\TakiTokacim\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -268,14 +268,14 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\BusiniessLayer\\BusiniessLayer.csproj": {
-                "projectPath": "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\BusiniessLayer\\BusiniessLayer.csproj"
+              "C:\\Users\\Samet\\Desktop\\TakiTokacim\\BusiniessLayer\\BusiniessLayer.csproj": {
+                "projectPath": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\BusiniessLayer\\BusiniessLayer.csproj"
               },
-              "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\DataAcsessLayer\\DataAcsessLayer.csproj": {
-                "projectPath": "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\DataAcsessLayer\\DataAcsessLayer.csproj"
+              "C:\\Users\\Samet\\Desktop\\TakiTokacim\\DataAcsessLayer\\DataAcsessLayer.csproj": {
+                "projectPath": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\DataAcsessLayer\\DataAcsessLayer.csproj"
               },
-              "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\EntitiyLayer\\EntitiyLayer.csproj": {
-                "projectPath": "C:\\Users\\Samet\\Desktop\\TakiTokacimeski\\EntitiyLayer\\EntitiyLayer.csproj"
+              "C:\\Users\\Samet\\Desktop\\TakiTokacim\\EntitiyLayer\\EntitiyLayer.csproj": {
+                "projectPath": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\EntitiyLayer\\EntitiyLayer.csproj"
               }
             }
           }

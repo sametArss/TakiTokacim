@@ -1,0 +1,86 @@
+@model TakiTokacim.Models.MyAccountViewModel
+@using System.Linq;
+@{
+    ViewData["Title"] = "Hesap Bilgilerim";
+    var AdresList = ViewBag.adress;
+}
+
+@if (TempData["DeleteMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["DeleteMessage"]
+    </div>
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card shadow-sm mb-4">
+                <div class="card-body text-center">
+                    <svg width="60" height="60" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="8" r="8" fill="#ffe5d0"/><circle cx="12" cy="8" r="4" fill="#e67e22"/><path d="M4 20c0-4 16-4 16 0" stroke="#e67e22" stroke-width="2"/></svg>
+                    <h4 class="mt-3">@Model.UserLName</h4>
+                    <p class="text-muted">@Model.Email</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="card shadow-sm mb-4" style="background: linear-gradient(90deg, #e67e22 60%, #f6c667 100%);">
+                <div class="card-header bg-transparent d-flex justify-content-between align-items-center" style="border-bottom: none;">
+                    <span class="text-white fw-bold">Kayıtlı Adreslerim</span>
+                    <a href="/Adress/AddAdress" class="btn btn-light btn-sm fw-bold" style="color:#e67e22;">+ Adres Ekle</a>
+                </div>
+                <div class="card-body">
+                    @if (AdresList.Count !=0 )
+                    {
+                        <ul class="list-group">
+                            @foreach (var adres in AdresList)
+                            {
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <strong>@adres.AdressTitle:</strong> @adres.AdressDescription
+                                        <br />
+                                        @adres.City?.CityName, @adres.District?.DistrictName
+                                    </div>
+                                    <div>
+                                        <a href="/Adress/Edit/@adres.AdressId" class="btn btn-sm btn-primary me-2">Düzenle</a>
+                                        <form asp-action="Delete" asp-controller="Adress" asp-route-id="@adres.AdressId" method="post" style="display:inline;" onsubmit="return confirm('Silmek istediğinize emin misiniz?');">
+                                            <button type="submit" class="btn btn-sm btn-danger">Sil</button>
+                                        </form>
+                                    </div>
+                                </li>
+                            }
+                        </ul>
+                    }
+                    else
+                    {
+                        <div class="text-white-50">Kayıtlı adresiniz yok.</div>
+                    }
+                </div>
+            </div>
+            <div class="card shadow-sm" style="background: linear-gradient(90deg, #e67e22 60%, #f6c667 100%);">
+                <div class="card-header bg-transparent d-flex justify-content-between align-items-center" style="border-bottom: none;">
+                    <span class="text-white fw-bold">Kayıtlı Kartlarım</span>
+                    <a href="/Account/AddCard" class="btn btn-light btn-sm fw-bold" style="color:#e67e22;">+ Kart Ekle</a>
+                </div>
+                <div class="card-body">
+                    @if (Model.Payments != null && Model.Payments.Any())
+                    {
+                        <ul class="list-group">
+                            @foreach (var kart in Model.Payments)
+                            {
+                                <li class="list-group-item">
+                                    <strong>Kart Adı:</strong> @kart.PaymentName <br />
+                                    <strong>Kart No:</strong> **** **** **** @kart.CardNumber?.Substring(@kart.CardNumber.Length - 4)
+                                </li>
+                            }
+                        </ul>
+                    }
+                    else
+                    {
+                        <div class="text-white-50">Kayıtlı kartınız yok.</div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

@@ -1,0 +1,97 @@
+﻿@model EntitiyLayer.Models.UserAdress
+@{
+    ViewData["Title"] = "Adres Düzenle";
+    var cities = ViewBag.Cities as List<EntitiyLayer.Models.City>;
+    var districts = ViewBag.Districts as List<EntitiyLayer.Models.District>;
+}
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger">
+        <ul>
+        @foreach (var key in ViewData.ModelState.Keys)
+        {
+            var errors = ViewData.ModelState[key].Errors;
+            foreach (var error in errors)
+            {
+                <li>@key : @error.ErrorMessage</li>
+            }
+        }
+        </ul>
+    </div>
+}
+<div class="row justify-content-center mt-5">
+    <div class="col-md-6">
+        <div class="card shadow-lg p-4">
+            <h3 class="fw-bold mb-4 text-center" style="color:#e67e22;">Adres Düzenle</h3>
+            <form asp-action="Edit" method="post">
+                <input type="hidden" asp-for="AdressId" />
+                <input type="hidden" asp-for="AdressStatus" />
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="mb-3">
+                    <label asp-for="AdressTitle" class="form-label"></label>
+                    <input asp-for="AdressTitle" class="form-control" />
+                    <span asp-validation-for="AdressTitle" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="AdressDescription" class="form-label"></label>
+                    <textarea asp-for="AdressDescription" class="form-control"></textarea>
+                    <span asp-validation-for="AdressDescription" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="CityId" class="form-label"></label>
+                    <select asp-for="CityId" class="form-select" id="CityId">
+                        <option value="">Şehir Seçiniz</option>
+                        @if (cities != null)
+                        {
+                            foreach (var city in cities)
+                            {
+                                <option value="@city.CityId" selected="@(Model.CityId == city.CityId ? "selected" : null)">@city.CityName</option>
+                            }
+                        }
+                    </select>
+                    <span asp-validation-for="CityId" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="DistrictId" class="form-label"></label>
+                    <select asp-for="DistrictId" class="form-select" id="DistrictId">
+                        <option value="">İlçe Seçiniz</option>
+                        @if (districts != null)
+                        {
+                            foreach (var district in districts)
+                            {
+                                <option value="@district.DistrictId" selected="@(Model.DistrictId == district.DistrictId ? "selected" : null)">@district.DistrictName</option>
+                            }
+                        }
+                    </select>
+                    <span asp-validation-for="DistrictId" class="text-danger"></span>
+                </div>
+                <button type="submit" class="btn btn-warning w-100" style="background:#e67e22; border:none;">Kaydet</button>
+            </form>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#CityId').change(function () {
+                var cityId = $(this).val();
+                if (cityId) {
+                    $.getJSON('/Adress/GetDistrictsByCity', { cityId: cityId }, function (data) {
+                        var districtSelect = $('#DistrictId');
+                        districtSelect.empty();
+                        districtSelect.append($('<option>').val('').text('İlçe Seçiniz'));
+                        $.each(data, function (i, district) {
+                            districtSelect.append($('<option>').val(district.districtId).text(district.districtName));
+                        });
+                    });
+                } else {
+                    $('#DistrictId').empty().append($('<option>').val('').text('İlçe Seçiniz'));
+                }
+            });
+        });
+    </script>
+}

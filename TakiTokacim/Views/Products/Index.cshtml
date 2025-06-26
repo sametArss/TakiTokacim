@@ -3,7 +3,7 @@
 
 @{
     ViewData["Title"] = "Ürünler";
-    var categories = ViewBag.Categories as List<Category>; // artık sabit liste değil
+    var categories = ViewBag.Categories as List<Category>; 
     var selected = ViewBag.SelectedCategory as string;
 }
 
@@ -23,6 +23,11 @@
 <div class="row g-4">
     @foreach (var product in Model)
     {
+        if (Model.Count==0)
+        {
+            <h5 class="card-body">Henüz Ürünlerimiz yüklenmemiştir </h5>
+        }
+
         <div class="col-md-3">
             <div class="card h-100 border-0 shadow-sm">
                 <img src="@product.ProductImage1" class="card-img-top" alt="@product.ProductName">

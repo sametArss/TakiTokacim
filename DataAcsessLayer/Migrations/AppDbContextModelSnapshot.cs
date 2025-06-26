@@ -463,6 +463,9 @@ namespace DataAcsessLayer.Migrations
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
+                    b.Property<bool>("AdressStatus")
+                        .HasColumnType("bit");
+
                     b.Property<string>("AdressTitle")
                         .IsRequired()
                         .HasMaxLength(150)

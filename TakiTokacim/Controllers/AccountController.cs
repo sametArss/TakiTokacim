@@ -2,6 +2,9 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using EntitiyLayer.Models;
 using TakiTokacim.Models;
+using Microsoft.AspNetCore.Authorization;
+using DataAcsessLayer.Abstract;
+using BusiniessLayer.Abstract;
 
 namespace TakiTokacim.Controllers
 {
@@ -9,11 +12,15 @@ namespace TakiTokacim.Controllers
     {
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
+        private readonly IAdressService _adressService;
 
-        public AccountController(UserManager<User> userManager, SignInManager<User> signInManager)
+
+        public AccountController(UserManager<User> userManager, SignInManager<User> signInManager, IAdressService adressService)
         {
+            _adressService =adressService;
             _userManager = userManager;
             _signInManager = signInManager;
+           
         }
 
         [HttpGet]
@@ -66,5 +73,53 @@ namespace TakiTokacim.Controllers
             await _signInManager.SignOutAsync();
             return RedirectToAction("Index", "Home");
         }
+
+        [Authorize]
+        public async Task<IActionResult> MyAccount()
+        {
+            var user = await _userManager.GetUserAsync(User);
+            //var adresses = user.UserAdresses?.ToList() ?? new List<UserAdress>();
+            var payments = user.Payments?.ToList() ?? new List<Payment>();
+            ViewBag.adress = _adressService.GetAdresses(User);
+            var model = new MyAccountViewModel
+            {
+                Email = user.Email,
+                UserLName = user.UserLName,
+                Adresses = ViewBag.adress,
+                Payments = payments
+            };
+            ViewBag.adress = _adressService.GetAdresses(User);
+            return View(model);
+        }
+
+       
+
+        //[Authorize]
+        //[HttpGet]
+        //public IActionResult AddCard()
+        //{
+        //    return View();
+        //}
+
+        //[Authorize]
+        //[HttpPost]
+        //public async Task<IActionResult> AddCard(AddCardViewModel model)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        var user = await _userManager.GetUserAsync(User);
+        //        var card = new Payment
+        //        {
+        //            PaymentName = model.PaymentName,
+        //            CardNumber = model.CardNumber,
+        //            CardDate = model.CardDate,
+        //            CardCvv = model.CardCvv,
+        //            UserId = user.Id
+        //        };
+        //        _paymentDal.Insert(card);
+        //        return RedirectToAction("MyAccount");
+        //    }
+        //    return View(model);
+        //}
     }
 } 
