@@ -7,13 +7,38 @@ namespace TakiTokacim.Controllers
     {
         public IActionResult Index()
         {
-            // Örnek sepet (gerçek projede session veya veritabanından gelir)
-            var cart = new List<dynamic>
-            {
-                new { Name = "Zarif Altın Yüzük", Price = 1200, Quantity = 1 },
-                new { Name = "İnci Kolye", Price = 950, Quantity = 2 }
-            };
-            return View(cart);
+           
+            return View();
         }
+
+
+        //[Authorize]
+        //[HttpGet]
+        //public IActionResult AddCard()
+        //{
+        //    return View();
+        //}
+
+        //[Authorize]
+        //[HttpPost]
+        //public async Task<IActionResult> AddCard(AddCardViewModel model)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        var user = await _userManager.GetUserAsync(User);
+        //        var card = new Payment
+        //        {
+        //            PaymentName = model.PaymentName,
+        //            CardNumber = model.CardNumber,
+        //            CardDate = model.CardDate,
+        //            CardCvv = model.CardCvv,
+        //            UserId = user.Id
+        //        };
+        //        _paymentDal.Insert(card);
+        //        return RedirectToAction("MyAccount");
+        //    }
+        //    return View(model);
+        //}
+
     }
 } 

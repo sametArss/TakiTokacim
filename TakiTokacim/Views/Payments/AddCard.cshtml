@@ -1,0 +1,40 @@
+﻿@model TakiTokacim.Models.AddCardViewModel
+@{
+    ViewData["Title"] = "Kart Ekle";
+}
+<div class="row justify-content-center mt-5">
+    <div class="col-md-6">
+        <div class="card shadow-lg p-4">
+            <h3 class="fw-bold mb-4 text-center" style="color:#e67e22;">Kart Ekle</h3>
+            <form asp-action="AddCard"  method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="mb-3">
+                    <label asp-for="PaymentName" class="form-label"></label>
+                    <input asp-for="PaymentName" class="form-control" />
+                    <span asp-validation-for="PaymentName" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="CardNumber" class="form-label"></label>
+                    <input asp-for="CardNumber" class="form-control" />
+                    <span asp-validation-for="CardNumber" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="CardDate" class="form-label"></label>
+                    <input asp-for="CardDate" class="form-control" placeholder="AA/YY" />
+                    <span asp-validation-for="CardDate" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="CardCvv" class="form-label"></label>
+                    <input asp-for="CardCvv" class="form-control" />
+                    <span asp-validation-for="CardCvv" class="text-danger"></span>
+                </div>
+                <button type="submit" class="btn btn-warning w-100" style="background:#e67e22; border:none;">Kaydet</button>
+            </form>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+} 

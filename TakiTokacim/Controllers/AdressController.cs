@@ -23,12 +23,9 @@ namespace TakiTokacim.Controllers
             
         }
 
-
-
         [HttpGet]
         public JsonResult GetDistrictsByCity(int cityId)
         {
-            // DistrictService veya context ile ilgili ilçeleri çekin
             var districts = _districtService.GetDistricts(cityId)
                 .Select(d => new { d.DistrictId, d.DistrictName }).ToList();
             return Json(districts);

@@ -13,13 +13,15 @@ namespace TakiTokacim.Controllers
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
         private readonly IAdressService _adressService;
+        private readonly IPaymentService _paymentService;
 
 
-        public AccountController(UserManager<User> userManager, SignInManager<User> signInManager, IAdressService adressService)
+        public AccountController(UserManager<User> userManager, SignInManager<User> signInManager, IAdressService adressService , IPaymentService paymentService)
         {
             _adressService =adressService;
             _userManager = userManager;
             _signInManager = signInManager;
+            _paymentService = paymentService;
            
         }
 
@@ -89,6 +91,7 @@ namespace TakiTokacim.Controllers
                 Payments = payments
             };
             ViewBag.adress = _adressService.GetAdresses(User);
+            ViewBag.payments = _paymentService.GetListByUser(User);
             return View(model);
         }
 

@@ -10,7 +10,7 @@ namespace TakiTokacim.Models
 
         [Required]
         [Display(Name = "Kart Numarası")]
-        [CreditCard]
+        
         public string CardNumber { get; set; }
 
         [Required]

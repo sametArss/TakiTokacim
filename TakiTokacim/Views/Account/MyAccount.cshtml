@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Hesap Bilgilerim";
     var AdresList = ViewBag.adress;
+    var PaymentsList = ViewBag.payments;
 }
 
 @if (TempData["DeleteMessage"] != null)
@@ -60,17 +61,22 @@
             <div class="card shadow-sm" style="background: linear-gradient(90deg, #e67e22 60%, #f6c667 100%);">
                 <div class="card-header bg-transparent d-flex justify-content-between align-items-center" style="border-bottom: none;">
                     <span class="text-white fw-bold">Kayıtlı Kartlarım</span>
-                    <a href="/Account/AddCard" class="btn btn-light btn-sm fw-bold" style="color:#e67e22;">+ Kart Ekle</a>
+                    <a href="/Payments/AddCard" class="btn btn-light btn-sm fw-bold" style="color:#e67e22;">+ Kart Ekle</a>
                 </div>
                 <div class="card-body">
-                    @if (Model.Payments != null && Model.Payments.Any())
+                    @if (PaymentsList.Count != 0)
                     {
                         <ul class="list-group">
-                            @foreach (var kart in Model.Payments)
+                            @foreach (var p in PaymentsList)
                             {
-                                <li class="list-group-item">
-                                    <strong>Kart Adı:</strong> @kart.PaymentName <br />
-                                    <strong>Kart No:</strong> **** **** **** @kart.CardNumber?.Substring(@kart.CardNumber.Length - 4)
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <strong>Kart Adı:</strong> @p.PaymentName  <br />
+                                        <strong>Kart No:</strong> **** **** **** @p.CardNumber?.Substring(p.CardNumber.Length - 4)
+                                    </div>
+                                    <form asp-action="Delete" asp-controller="Payments" asp-route-id="@p.PaymentId" method="post" style="display:inline;" onsubmit="return confirm('Silmek istediğinize emin misiniz?');">
+                                        <button type="submit" class="btn btn-sm btn-danger ms-3">Sil</button>
+                                    </form>
                                 </li>
                             }
                         </ul>

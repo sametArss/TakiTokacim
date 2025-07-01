@@ -18,12 +18,14 @@ namespace EntitiyLayer.Models
         public virtual User User { get; set; }
         public int TypeId { get; set; }
         public virtual PaymentType PaymentType { get; set; }
-        [StringLength(16)]
+        [StringLength(20)]
         public string CardNumber { get; set; }
         [StringLength(3)]
         public string CardCvv { get; set; }
         [StringLength(5)]
         public string CardDate { get; set; }
+
+        public bool PaymentStatus { get; set; }
 
         public ICollection<Order> Orders { get; set; }
     }
