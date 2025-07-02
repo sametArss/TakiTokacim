@@ -60,7 +60,7 @@ builder.Services.AddScoped<IDistrictService, DistrictManager>();
 builder.Services.AddScoped<IAdressService, AdressManager>();
 builder.Services.AddScoped<ICartService,CartManager>();
 builder.Services.AddScoped<IPaymentService,PaymentsManager>();
-
+builder.Services.AddScoped<ICartItemService,CartItemManager>();
 
 
 var cultureInfo = new CultureInfo("tr-TR");

@@ -41,12 +41,20 @@
                 </div>
                 <div class="col-md-6">
                     <h2 class="fw-bold mb-2" style="color:#e67e22;">@Model.ProductName</h2>
+                    
+                    @if (TempData["CartSuccess"] != null)
+                    {
+                        <div class="alert alert-success">@TempData["CartSuccess"]</div>
+                    }
+                    
                     <div class="mb-2 text-muted">@Model.Category.CategoryName</div>
                     <div class="mb-3" style="font-size:1.3rem; color:#e67e22; font-weight:600;">@Model.ProductPrice TL</div>
                     <p class="mb-4">@Model.ProductDescription</p>
-                    <form class="d-flex align-items-center mb-3" style="gap:10px;">
+                    <form asp-action="CartControl" asp-controller="Cart" method="post" class="d-flex align-items-center mb-3" style="gap:10px;">
+                        <input type="hidden" name="ProductId" value="@Model.ProductId" />
+                        <input type="hidden" name="UnitPrice" value="@Model.ProductPrice" />
                         <label class="form-label mb-0">Adet:</label>
-                        <input type="number" class="form-control" value="1" min="1" style="width:80px;">
+                        <input type="number" name="Quantity" class="form-control" value="1" min="1" max="10" style="width:80px;">
                         <button type="submit" class="btn btn-warning px-4" style="background:#e67e22; border:none;">Sepete Ekle</button>
                     </form>
                 </div>

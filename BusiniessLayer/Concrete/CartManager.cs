@@ -20,10 +20,17 @@ namespace BusiniessLayer.Concrete
             _cartDal = cartDal;
         }
 
-        public List<Cart> GetListByUser(ClaimsPrincipal user)
+        public void Insert(Cart c)
+        {
+            _cartDal.Insert(c);
+        }
+
+        public Cart UserActiveCart(ClaimsPrincipal user)
         {
             var userId = user.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
-            return _cartDal.GetAllFilter(x => x.UserId==userId );
+            return _cartDal.GetAllFilter(x => x.UserId == userId && x.CartStatus == true).FirstOrDefault();
         }
+
+
     }
 }

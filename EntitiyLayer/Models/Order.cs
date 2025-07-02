@@ -32,5 +32,9 @@ namespace EntitiyLayer.Models
 
         public int CartId { get; set; }
         public virtual Cart Cart { get; set; }
+
+        public DateTime OrderDate { get; set; }
+        public decimal TotalAmount { get; set; }
+
     }
 }

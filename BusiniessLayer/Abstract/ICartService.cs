@@ -1,4 +1,5 @@
 ﻿using EntitiyLayer.Models;
+using Microsoft.EntityFrameworkCore.Migrations.Operations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,9 @@ namespace BusiniessLayer.Abstract
 {
     public interface ICartService
     {
-        List<Cart> GetListByUser(System.Security.Claims.ClaimsPrincipal user);
+        Cart UserActiveCart(System.Security.Claims.ClaimsPrincipal user);
+        void Insert(Cart c);
+
+        
     }
 }
