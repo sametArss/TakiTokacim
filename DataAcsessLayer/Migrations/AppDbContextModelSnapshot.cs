@@ -197,9 +197,6 @@ namespace DataAcsessLayer.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("OrderId"));
 
-                    b.Property<int>("AdressId")
-                        .HasColumnType("int");
-
                     b.Property<int>("CartId")
                         .HasColumnType("int");
 
@@ -214,6 +211,9 @@ namespace DataAcsessLayer.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("OrderDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<int>("PaymentId")
                         .HasColumnType("int");
 
@@ -227,10 +227,15 @@ namespace DataAcsessLayer.Migrations
 
                     b.Property<string>("Status")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("TotalAmount")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<int?>("UserAdressAdressId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserAdressId")
                         .HasColumnType("int");
 
                     b.Property<string>("UserId")
@@ -242,8 +247,6 @@ namespace DataAcsessLayer.Migrations
 
                     b.HasKey("OrderId");
 
-                    b.HasIndex("AdressId");
-
                     b.HasIndex("CartId");
 
                     b.HasIndex("CartId1");
@@ -253,6 +256,8 @@ namespace DataAcsessLayer.Migrations
                     b.HasIndex("PaymentId1");
 
                     b.HasIndex("UserAdressAdressId");
+
+                    b.HasIndex("UserAdressId");
 
                     b.HasIndex("UserId");
 
@@ -688,12 +693,6 @@ namespace DataAcsessLayer.Migrations
 
             modelBuilder.Entity("EntitiyLayer.Models.Order", b =>
                 {
-                    b.HasOne("EntitiyLayer.Models.UserAdress", "UserAdress")
-                        .WithMany()
-                        .HasForeignKey("AdressId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
                     b.HasOne("EntitiyLayer.Models.Cart", "Cart")
                         .WithMany()
                         .HasForeignKey("CartId")
@@ -717,6 +716,12 @@ namespace DataAcsessLayer.Migrations
                     b.HasOne("EntitiyLayer.Models.UserAdress", null)
                         .WithMany("Orders")
                         .HasForeignKey("UserAdressAdressId");
+
+                    b.HasOne("EntitiyLayer.Models.UserAdress", "UserAdress")
+                        .WithMany()
+                        .HasForeignKey("UserAdressId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
 
                     b.HasOne("EntitiyLayer.Models.User", "User")
                         .WithMany()

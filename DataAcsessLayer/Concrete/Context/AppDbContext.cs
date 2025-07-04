@@ -79,33 +79,28 @@ namespace DataAcsessLayer.Concrete.Context
  .WithMany(d => d.Comments)
  .HasForeignKey(ua => ua.ProductId)
  .OnDelete(DeleteBehavior.Restrict);
-
-            // Order → Payment
             modelBuilder.Entity<Order>()
-                .HasOne(o => o.Payment)
-                .WithMany()  // Payment üzerinde Orders koleksiyonu tanımlı değil
-                .HasForeignKey(o => o.PaymentId)
-                .OnDelete(DeleteBehavior.Restrict); // Cascade'i kaldırıyoruz
+                   .HasOne(o => o.Cart)
+                   .WithMany()
+                   .HasForeignKey(o => o.CartId)
+                   .OnDelete(DeleteBehavior.Restrict); // İsteğe bağlı
 
-            // Order → UserAdress
-            modelBuilder.Entity<Order>()
-                .HasOne(o => o.UserAdress)
-                .WithMany()
-                .HasForeignKey(o => o.AdressId)
-                .OnDelete(DeleteBehavior.Restrict);
-
-            // Order → User
             modelBuilder.Entity<Order>()
                 .HasOne(o => o.User)
                 .WithMany()
                 .HasForeignKey(o => o.UserId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            // Order → Cart
             modelBuilder.Entity<Order>()
-                .HasOne(o => o.Cart)
+                .HasOne(o => o.Payment)
                 .WithMany()
-                .HasForeignKey(o => o.CartId)
+                .HasForeignKey(o => o.PaymentId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Order>()
+                .HasOne(o => o.UserAdress)
+                .WithMany()
+                .HasForeignKey(o => o.UserAdressId)
                 .OnDelete(DeleteBehavior.Restrict);
 
             // UserId artık string olduğu için foreign key tanımları uyumlu.

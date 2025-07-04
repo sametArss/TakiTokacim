@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace DataAcsessLayer.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialIdentity : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -208,17 +208,17 @@ namespace DataAcsessLayer.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     CartStatus = table.Column<bool>(type: "bit", nullable: false),
                     Date = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    UserId = table.Column<int>(type: "int", nullable: false),
-                    UserId1 = table.Column<string>(type: "nvarchar(450)", nullable: true)
+                    UserId = table.Column<string>(type: "nvarchar(450)", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Carts", x => x.CartId);
                     table.ForeignKey(
-                        name: "FK_Carts_AspNetUsers_UserId1",
-                        column: x => x.UserId1,
+                        name: "FK_Carts_AspNetUsers_UserId",
+                        column: x => x.UserId,
                         principalTable: "AspNetUsers",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -277,9 +277,10 @@ namespace DataAcsessLayer.Migrations
                     PaymentName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     TypeId = table.Column<int>(type: "int", nullable: false),
-                    CardNumber = table.Column<string>(type: "nvarchar(16)", maxLength: 16, nullable: false),
+                    CardNumber = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
                     CardCvv = table.Column<string>(type: "nvarchar(3)", maxLength: 3, nullable: false),
-                    CardDate = table.Column<string>(type: "nvarchar(5)", maxLength: 5, nullable: false)
+                    CardDate = table.Column<string>(type: "nvarchar(5)", maxLength: 5, nullable: false),
+                    PaymentStatus = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -366,6 +367,7 @@ namespace DataAcsessLayer.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     AdressTitle = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
                     AdressDescription = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
+                    AdressStatus = table.Column<bool>(type: "bit", nullable: false),
                     UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     CityId = table.Column<int>(type: "int", nullable: false),
                     DistrictId = table.Column<int>(type: "int", nullable: false)
@@ -400,13 +402,15 @@ namespace DataAcsessLayer.Migrations
                     OrderId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FullName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Status = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PhoneNum = table.Column<string>(type: "nvarchar(11)", maxLength: 11, nullable: false),
+                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PaymentId = table.Column<int>(type: "int", nullable: false),
-                    AdressId = table.Column<int>(type: "int", nullable: false),
+                    UserAdressId = table.Column<int>(type: "int", nullable: false),
                     UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     CartId = table.Column<int>(type: "int", nullable: false),
+                    OrderDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    TotalAmount = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     CartId1 = table.Column<int>(type: "int", nullable: true),
                     PaymentId1 = table.Column<int>(type: "int", nullable: true),
                     UserAdressAdressId = table.Column<int>(type: "int", nullable: true),
@@ -449,16 +453,16 @@ namespace DataAcsessLayer.Migrations
                         principalTable: "Payments",
                         principalColumn: "PaymentId");
                     table.ForeignKey(
-                        name: "FK_Orders_UserAdresses_AdressId",
-                        column: x => x.AdressId,
-                        principalTable: "UserAdresses",
-                        principalColumn: "AdressId",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
                         name: "FK_Orders_UserAdresses_UserAdressAdressId",
                         column: x => x.UserAdressAdressId,
                         principalTable: "UserAdresses",
                         principalColumn: "AdressId");
+                    table.ForeignKey(
+                        name: "FK_Orders_UserAdresses_UserAdressId",
+                        column: x => x.UserAdressId,
+                        principalTable: "UserAdresses",
+                        principalColumn: "AdressId",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
@@ -511,9 +515,9 @@ namespace DataAcsessLayer.Migrations
                 column: "ProductId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Carts_UserId1",
+                name: "IX_Carts_UserId",
                 table: "Carts",
-                column: "UserId1");
+                column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Comments_ProductId",
@@ -529,11 +533,6 @@ namespace DataAcsessLayer.Migrations
                 name: "IX_Districts_CityId",
                 table: "Districts",
                 column: "CityId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Orders_AdressId",
-                table: "Orders",
-                column: "AdressId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Orders_CartId",
@@ -559,6 +558,11 @@ namespace DataAcsessLayer.Migrations
                 name: "IX_Orders_UserAdressAdressId",
                 table: "Orders",
                 column: "UserAdressAdressId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Orders_UserAdressId",
+                table: "Orders",
+                column: "UserAdressId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Orders_UserId",

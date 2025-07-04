@@ -1242,3 +1242,9 @@ C:\Users\Samet\Desktop\llm_project\TakiTokacimeski\TakiTokacim\obj\Debug\net9.0\
 C:\Users\Samet\Desktop\llm_project\TakiTokacimeski\TakiTokacim\obj\Debug\net9.0\TakiTokacim.pdb
 C:\Users\Samet\Desktop\llm_project\TakiTokacimeski\TakiTokacim\obj\Debug\net9.0\TakiTokacim.genruntimeconfig.cache
 C:\Users\Samet\Desktop\llm_project\TakiTokacimeski\TakiTokacim\obj\Debug\net9.0\ref\TakiTokacim.dll
+C:\Users\Samet\Desktop\TakiTokacim\TakiTokacim\bin\Debug\net9.0\Microsoft.Extensions.Configuration.dll
+C:\Users\Samet\Desktop\TakiTokacim\TakiTokacim\bin\Debug\net9.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\Samet\Desktop\TakiTokacim\TakiTokacim\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\Samet\Desktop\TakiTokacim\TakiTokacim\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Samet\Desktop\TakiTokacim\TakiTokacim\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\Samet\Desktop\TakiTokacim\TakiTokacim\bin\Debug\net9.0\Microsoft.Extensions.FileSystemGlobbing.dll
