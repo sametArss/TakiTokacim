@@ -25,6 +25,13 @@ namespace BusiniessLayer.Concrete
             _cartDal.Insert(c);
         }
 
+        public void Update(Cart c)
+        {
+            var value=_cartDal.GetById(c.CartId);
+            value.CartStatus = false;
+            _cartDal.Update(value);
+        }
+
         public Cart UserActiveCart(ClaimsPrincipal user)
         {
             var userId = user.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;

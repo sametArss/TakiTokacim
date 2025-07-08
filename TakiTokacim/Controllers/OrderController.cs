@@ -106,7 +106,8 @@ namespace TakiTokacim.Controllers
                 }
                 _orderService.Insert(order);
                 TempData["Success"] = "Siparişiniz başarıyla oluşturuldu.";
-                return RedirectToAction("MyAccount", "Account");
+                _cartService.Update(cart);
+                return RedirectToAction("MyOrders");
             }
             // Hatalı alanları Türkçe olarak topla ve TempData ile view'a gönder
             var hataListesi = new List<string>();
@@ -151,6 +152,23 @@ namespace TakiTokacim.Controllers
                 ViewBag.CartTotal = 0;
             }
             return View(model);
+        }
+
+
+        public IActionResult MyOrders()
+        {
+            var userId = _userService.GetUserId(User);
+            var values = _orderService.OrderList(User); 
+
+            if(values == null || !values.Any())
+            {
+                TempData["OrderMessage"] = "Siparişiniz yoktur.";
+                return View();
+            }
+            else
+            {
+                return View(values);
+            }
         }
     }
 } 

@@ -72,6 +72,8 @@ namespace DataAcsessLayer.Concrete.Repositories
 
             return query.Where(filter).ToList();
         }
+
+       
     }
 }
 

@@ -13,6 +13,7 @@ namespace BusiniessLayer.Abstract
         Cart UserActiveCart(System.Security.Claims.ClaimsPrincipal user);
         void Insert(Cart c);
 
+        void Update(Cart c);    
         
     }
 }

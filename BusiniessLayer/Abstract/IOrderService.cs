@@ -10,5 +10,6 @@ namespace BusiniessLayer.Abstract
     public  interface IOrderService
     {
         void Insert(Order order);
+        List<Order> OrderList(System.Security.Claims.ClaimsPrincipal user);
     }
 }

@@ -1,0 +1,76 @@
+@model IEnumerable<EntitiyLayer.Models.Order>
+@{
+    ViewData["Title"] = "Siparişlerim";
+}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<link rel="stylesheet" href="~/css/site.css" />
+
+<div class="container py-5">
+    <h2 class="mb-4 text-center"><i class="fa-solid fa-box"></i> Siparişlerim</h2>
+
+    @if (TempData["OrderMessage"] != null)
+    {
+        <div class="alert alert-info text-center" role="alert">
+            <i class="fa-solid fa-circle-info"></i> @TempData["OrderMessage"]
+        </div>
+    }
+    else if (Model != null && Model.Any())
+    {
+        <div class="row">
+            @foreach (var order in Model)
+            {
+                <div class="col-md-6 col-lg-4">
+                    <div class="card order-card">
+                        <div style="margin: 5px 10px "class="order-header">
+                            <i class="fa-solid fa-receipt"></i>
+                            <span>Sipariş No: <b>@order.OrderId</b></span>
+                        </div>
+                        <div style="margin-left:10px" class="order-body">
+                            <div class="mb-2">
+                                <i class="fa-solid fa-user"></i>
+                                <span class="ms-1">@order.FullName</span>
+                            </div>
+                            <div class="mb-2">
+                                <i class="fa-regular fa-calendar"></i>
+                                <span class="ms-1">@order.OrderDate.ToString("d MMMM yyyy HH:mm")</span>
+                            </div>
+                            <div class="mb-2">
+                                <i class="fa-solid fa-money-bill-wave"></i>
+                                <span class="ms-1">@order.TotalAmount.ToString("C")</span>
+                            </div>
+                            <div class="mb-2">
+                                <i class="fa-solid fa-info-circle"></i>
+                                <span class="ms-1 order-status @GetStatusClass(order.Status)">
+                                    @order.Status
+                                </span>
+                            </div>
+                            <div class="order-actions mt-3 d-flex justify-content-end">
+                                <a class="btn btn-outline-primary btn-sm" href="@Url.Action("Details", "Order", new { id = order.OrderId })" style="margin-bottom: 0.5rem; margin-right: 0.5rem;">
+                                    <i class="fa-solid fa-magnifying-glass"></i> Detay
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-warning text-center" role="alert">
+            <i class="fa-solid fa-triangle-exclamation"></i> Sipariş bulunamadı.
+        </div>
+    }
+</div>
+
+@functions{
+    public string GetStatusClass(string status)
+    {
+        if (string.IsNullOrEmpty(status)) return "status-beklemede";
+        status = status.ToLower();
+        if (status.Contains("bekle")) return "status-beklemede";
+        if (status.Contains("tamam")) return "status-tamamlandi";
+        if (status.Contains("iptal")) return "status-iptal";
+        return "status-beklemede";
+    }
+} 
