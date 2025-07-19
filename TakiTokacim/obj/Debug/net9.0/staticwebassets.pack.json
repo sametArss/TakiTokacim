@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\css\\site2.css"
     },
     {
+      "Id": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\TakiTokacim\\wwwroot\\favico.svg",
+      "PackagePath": "staticwebassets\\favico.svg"
+    },
+    {
       "Id": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\TakiTokacim\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },

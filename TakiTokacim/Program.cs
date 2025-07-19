@@ -49,6 +49,8 @@ builder.Services.AddScoped<IPaymentDal, EFPaymentDal>();
 builder.Services.AddScoped<IPaymentTypeDal, EFPaymentTypeDal>();
 builder.Services.AddScoped<IUserDal, EFUserDal>();
 builder.Services.AddScoped<IUserAdressDal, EFUserAdressDal>();
+builder.Services.AddScoped<IContactDal, EFContactDal>();
+builder.Services.AddScoped<IAboutDal, EFAboutDal>();
 
 // Service Katmanı
 builder.Services.AddScoped<IProductService, ProductManager>();
@@ -62,6 +64,8 @@ builder.Services.AddScoped<ICartService,CartManager>();
 builder.Services.AddScoped<IPaymentService,PaymentsManager>();
 builder.Services.AddScoped<ICartItemService, CartItemManager>();
 builder.Services.AddScoped<IOrderService, OrderManager>();
+builder.Services.AddScoped<IContactService, ContactManager>();
+builder.Services.AddScoped<IAboutService, AboutManager>();
 
 
 var cultureInfo = new CultureInfo("tr-TR");

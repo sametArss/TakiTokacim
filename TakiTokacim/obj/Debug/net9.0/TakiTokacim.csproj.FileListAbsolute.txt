@@ -1248,3 +1248,4 @@ C:\Users\Samet\Desktop\TakiTokacim\TakiTokacim\bin\Debug\net9.0\Microsoft.Extens
 C:\Users\Samet\Desktop\TakiTokacim\TakiTokacim\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Abstractions.dll
 C:\Users\Samet\Desktop\TakiTokacim\TakiTokacim\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Physical.dll
 C:\Users\Samet\Desktop\TakiTokacim\TakiTokacim\bin\Debug\net9.0\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\Samet\Desktop\TakiTokacim\TakiTokacim\obj\Debug\net9.0\compressed\87d2bod5f5-w6e6rnvvo6.gz

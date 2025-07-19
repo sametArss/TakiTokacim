@@ -22,6 +22,23 @@ namespace DataAcsessLayer.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("EntitiyLayer.Models.About", b =>
+                {
+                    b.Property<int>("AboutId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AboutId"));
+
+                    b.Property<string>("AboutMessage")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("AboutId");
+
+                    b.ToTable("Aboutss");
+                });
+
             modelBuilder.Entity("EntitiyLayer.Models.Cart", b =>
                 {
                     b.Property<int>("CartId")
@@ -164,6 +181,35 @@ namespace DataAcsessLayer.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Comments");
+                });
+
+            modelBuilder.Entity("EntitiyLayer.Models.Contact", b =>
+                {
+                    b.Property<int>("ContactId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ContactId"));
+
+                    b.Property<bool>("IsRead")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Message")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("UserMail")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserNameLName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ContactId");
+
+                    b.ToTable("Contacts");
                 });
 
             modelBuilder.Entity("EntitiyLayer.Models.District", b =>

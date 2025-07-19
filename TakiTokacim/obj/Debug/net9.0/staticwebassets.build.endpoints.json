@@ -9428,6 +9428,304 @@
       ]
     },
     {
+      "Route": "favico.svg",
+      "AssetFile": "favico.svg.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001773049645"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "563"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qj3cT9SZaUGHBCdAreCK4MDZNTEPaBCaQX5ZA1d0QMA=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"WPQZAdYV5Y9Lx7ZJmjKLshOoukgD9zllkuGIQgW3fOU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Jul 2025 11:57:27 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-WPQZAdYV5Y9Lx7ZJmjKLshOoukgD9zllkuGIQgW3fOU="
+        }
+      ]
+    },
+    {
+      "Route": "favico.svg",
+      "AssetFile": "favico.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1916"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WPQZAdYV5Y9Lx7ZJmjKLshOoukgD9zllkuGIQgW3fOU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Jul 2025 11:57:27 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-WPQZAdYV5Y9Lx7ZJmjKLshOoukgD9zllkuGIQgW3fOU="
+        }
+      ]
+    },
+    {
+      "Route": "favico.svg.gz",
+      "AssetFile": "favico.svg.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "563"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qj3cT9SZaUGHBCdAreCK4MDZNTEPaBCaQX5ZA1d0QMA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Jul 2025 11:57:27 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-qj3cT9SZaUGHBCdAreCK4MDZNTEPaBCaQX5ZA1d0QMA="
+        }
+      ]
+    },
+    {
+      "Route": "favico.w6e6rnvvo6.svg",
+      "AssetFile": "favico.svg.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001773049645"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "563"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qj3cT9SZaUGHBCdAreCK4MDZNTEPaBCaQX5ZA1d0QMA=\""
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"WPQZAdYV5Y9Lx7ZJmjKLshOoukgD9zllkuGIQgW3fOU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Jul 2025 11:57:27 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "w6e6rnvvo6"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-WPQZAdYV5Y9Lx7ZJmjKLshOoukgD9zllkuGIQgW3fOU="
+        },
+        {
+          "Name": "label",
+          "Value": "favico.svg"
+        }
+      ]
+    },
+    {
+      "Route": "favico.w6e6rnvvo6.svg",
+      "AssetFile": "favico.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1916"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WPQZAdYV5Y9Lx7ZJmjKLshOoukgD9zllkuGIQgW3fOU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Jul 2025 11:57:27 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "w6e6rnvvo6"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-WPQZAdYV5Y9Lx7ZJmjKLshOoukgD9zllkuGIQgW3fOU="
+        },
+        {
+          "Name": "label",
+          "Value": "favico.svg"
+        }
+      ]
+    },
+    {
+      "Route": "favico.w6e6rnvvo6.svg.gz",
+      "AssetFile": "favico.svg.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "563"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qj3cT9SZaUGHBCdAreCK4MDZNTEPaBCaQX5ZA1d0QMA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Jul 2025 11:57:27 GMT"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "w6e6rnvvo6"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-qj3cT9SZaUGHBCdAreCK4MDZNTEPaBCaQX5ZA1d0QMA="
+        },
+        {
+          "Name": "label",
+          "Value": "favico.svg.gz"
+        }
+      ]
+    },
+    {
       "Route": "favicon.61n19gt1b8.ico",
       "AssetFile": "favicon.ico.gz",
       "Selectors": [

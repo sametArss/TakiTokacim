@@ -1,4 +1,13 @@
-﻿<!DOCTYPE html>
+﻿@using BusiniessLayer.Abstract
+@inject IContactService contactService
+@{
+    int unreadCount = 0;
+    if (User.IsInRole("Admin"))
+    {
+        unreadCount = contactService.GetAllMessage().Count(x => !x.IsRead);
+    }
+}
+<!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="utf-8" />
@@ -10,6 +19,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="~/favico.svg" />
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -104,9 +114,6 @@
     <li class="nav-item">
         <a class="nav-link" asp-area="" asp-controller="Categories" asp-action="Index">Kategoriler</a>
     </li>
-    <li class="nav-item">
-         <a class="nav-link" asp-area="" asp-controller="Comments" asp-action="Pendings">Onay Bekleyen Yorumlar </a>
-    </li>
                         }
     <li class="nav-item">
         <a class="nav-link" asp-area="" asp-controller="Products" asp-action="Index">Ürünler</a>
@@ -127,6 +134,19 @@
         </a>
         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
     <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="MyAccount">Hesap Bilgilerim</a></li>
+    @if (User.IsInRole("Admin")) {
+        <li>
+            <a class="dropdown-item d-flex justify-content-between align-items-center" asp-area="" asp-controller="Account" asp-action="Messages">
+                Mesajlar
+                @if (unreadCount > 0) {
+                    <span class="badge bg-danger ms-2">@unreadCount</span>
+                }
+            </a>
+        </li>
+    }
+    @if(User.IsInRole("Admin")){
+        <li><a class="dropdown-item" asp-area="" asp-controller="Comments" asp-action="Pendings">Onay Bekleyen Yorumlar</a></li>
+    }
     <li>
         <form asp-controller="Account" asp-action="Logout" method="post" style="margin:0; padding:0;">
             <button type="submit" class="dropdown-item" style="background:none; border:none; width:100%; text-align:left; color:#212529; cursor:pointer;">Çıkış Yap</button>

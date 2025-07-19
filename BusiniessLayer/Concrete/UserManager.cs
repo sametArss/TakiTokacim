@@ -20,7 +20,8 @@ namespace BusiniessLayer.Concrete
 
         public void Delete(User user)
         {
-            throw new NotImplementedException();
+            user.UserStatus=false;
+            _userDal.Update(user);
         }
 
         public string GetUserId(System.Security.Claims.ClaimsPrincipal user)

@@ -26,6 +26,8 @@ namespace DataAcsessLayer.Concrete.Context
         public DbSet<Cart> Carts { get; set; }
         public DbSet<CartItem> CartItems { get; set; }
         public DbSet<Order> Orders  { get; set; }
+        public DbSet<About> Aboutss  { get; set; }
+        public DbSet<Contact> Contacts  { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

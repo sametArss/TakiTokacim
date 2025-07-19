@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "eMsxUeqIUoF8mAqOXw9ZcNO6KRp56y+xHSfSuQGFkyE=",
+  "Hash": "+HIm93NWunyeiH/RPf0jxp4aFmRCJfhp4uEMVQTvHZU=",
   "Source": "TakiTokacim",
   "BasePath": "_content/TakiTokacim",
   "Mode": "Default",
@@ -1737,6 +1737,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\TakiTokacim\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Identity": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\TakiTokacim\\obj\\Debug\\net9.0\\compressed\\87d2bod5f5-w6e6rnvvo6.gz",
+      "SourceId": "TakiTokacim",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\TakiTokacim\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/TakiTokacim",
+      "RelativePath": "favico#[.{fingerprint=w6e6rnvvo6}]?.svg.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\TakiTokacim\\wwwroot\\favico.svg",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "ms156tlqry",
+      "Integrity": "qj3cT9SZaUGHBCdAreCK4MDZNTEPaBCaQX5ZA1d0QMA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\TakiTokacim\\wwwroot\\favico.svg"
     },
     {
       "Identity": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\TakiTokacim\\obj\\Debug\\net9.0\\compressed\\8axix7wldr-fsbi9cje9m.gz",
@@ -4091,6 +4112,27 @@
       "OriginalItemSpec": "wwwroot\\css\\site2.css"
     },
     {
+      "Identity": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\TakiTokacim\\wwwroot\\favico.svg",
+      "SourceId": "TakiTokacim",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\TakiTokacim\\wwwroot\\",
+      "BasePath": "_content/TakiTokacim",
+      "RelativePath": "favico#[.{fingerprint}]?.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "w6e6rnvvo6",
+      "Integrity": "WPQZAdYV5Y9Lx7ZJmjKLshOoukgD9zllkuGIQgW3fOU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favico.svg"
+    },
+    {
       "Identity": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\TakiTokacim\\wwwroot\\favicon.ico",
       "SourceId": "TakiTokacim",
       "SourceType": "Discovered",
@@ -6024,6 +6066,304 @@
         {
           "Name": "integrity",
           "Value": "sha256-gg3NMmYeqhYdoz3Ujg4+R9P+AXnxDW99TMH8X2dKL3E="
+        }
+      ]
+    },
+    {
+      "Route": "favico.svg",
+      "AssetFile": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\TakiTokacim\\obj\\Debug\\net9.0\\compressed\\87d2bod5f5-w6e6rnvvo6.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001773049645"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "563"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qj3cT9SZaUGHBCdAreCK4MDZNTEPaBCaQX5ZA1d0QMA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Jul 2025 11:57:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"WPQZAdYV5Y9Lx7ZJmjKLshOoukgD9zllkuGIQgW3fOU=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-WPQZAdYV5Y9Lx7ZJmjKLshOoukgD9zllkuGIQgW3fOU="
+        }
+      ]
+    },
+    {
+      "Route": "favico.svg",
+      "AssetFile": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\TakiTokacim\\wwwroot\\favico.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1916"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WPQZAdYV5Y9Lx7ZJmjKLshOoukgD9zllkuGIQgW3fOU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Jul 2025 11:57:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-WPQZAdYV5Y9Lx7ZJmjKLshOoukgD9zllkuGIQgW3fOU="
+        }
+      ]
+    },
+    {
+      "Route": "favico.svg.gz",
+      "AssetFile": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\TakiTokacim\\obj\\Debug\\net9.0\\compressed\\87d2bod5f5-w6e6rnvvo6.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "563"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qj3cT9SZaUGHBCdAreCK4MDZNTEPaBCaQX5ZA1d0QMA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Jul 2025 11:57:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-qj3cT9SZaUGHBCdAreCK4MDZNTEPaBCaQX5ZA1d0QMA="
+        }
+      ]
+    },
+    {
+      "Route": "favico.w6e6rnvvo6.svg",
+      "AssetFile": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\TakiTokacim\\obj\\Debug\\net9.0\\compressed\\87d2bod5f5-w6e6rnvvo6.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001773049645"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "563"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qj3cT9SZaUGHBCdAreCK4MDZNTEPaBCaQX5ZA1d0QMA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Jul 2025 11:57:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"WPQZAdYV5Y9Lx7ZJmjKLshOoukgD9zllkuGIQgW3fOU=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "w6e6rnvvo6"
+        },
+        {
+          "Name": "label",
+          "Value": "favico.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-WPQZAdYV5Y9Lx7ZJmjKLshOoukgD9zllkuGIQgW3fOU="
+        }
+      ]
+    },
+    {
+      "Route": "favico.w6e6rnvvo6.svg",
+      "AssetFile": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\TakiTokacim\\wwwroot\\favico.svg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1916"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"WPQZAdYV5Y9Lx7ZJmjKLshOoukgD9zllkuGIQgW3fOU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Jul 2025 11:57:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "w6e6rnvvo6"
+        },
+        {
+          "Name": "label",
+          "Value": "favico.svg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-WPQZAdYV5Y9Lx7ZJmjKLshOoukgD9zllkuGIQgW3fOU="
+        }
+      ]
+    },
+    {
+      "Route": "favico.w6e6rnvvo6.svg.gz",
+      "AssetFile": "C:\\Users\\Samet\\Desktop\\TakiTokacim\\TakiTokacim\\obj\\Debug\\net9.0\\compressed\\87d2bod5f5-w6e6rnvvo6.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "563"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/svg+xml"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qj3cT9SZaUGHBCdAreCK4MDZNTEPaBCaQX5ZA1d0QMA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 19 Jul 2025 11:57:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "w6e6rnvvo6"
+        },
+        {
+          "Name": "label",
+          "Value": "favico.svg.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-qj3cT9SZaUGHBCdAreCK4MDZNTEPaBCaQX5ZA1d0QMA="
         }
       ]
     },

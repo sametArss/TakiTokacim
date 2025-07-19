@@ -9,6 +9,7 @@ C:\Users\Samet\Desktop\TakiTokacim\TakiTokacim\wwwroot\lib\bootstrap\dist\js\boo
 C:\Users\Samet\Desktop\TakiTokacim\TakiTokacim\wwwroot\css\site.css
 C:\Users\Samet\Desktop\TakiTokacim\TakiTokacim\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map
 C:\Users\Samet\Desktop\TakiTokacim\TakiTokacim\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
+C:\Users\Samet\Desktop\TakiTokacim\TakiTokacim\wwwroot\favico.svg
 C:\Users\Samet\Desktop\TakiTokacim\TakiTokacim\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.js
 C:\Users\Samet\Desktop\TakiTokacim\TakiTokacim\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map
 C:\Users\Samet\Desktop\TakiTokacim\TakiTokacim\wwwroot\lib\jquery-validation\LICENSE.md
@@ -63,6 +64,7 @@ C:\Users\Samet\Desktop\TakiTokacim\TakiTokacim\wwwroot\lib\bootstrap\dist\js\boo
 C:\Users\Samet\Desktop\TakiTokacim\TakiTokacim\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css
 wwwroot\css\site.css
 wwwroot\css\site2.css
+wwwroot\favico.svg
 wwwroot\favicon.ico
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css

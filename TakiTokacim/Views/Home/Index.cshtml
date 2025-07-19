@@ -2,6 +2,13 @@
     ViewData["Title"] = "Ana Sayfa";
 }
 
+@if (TempData["LogoutInfo"] != null) {
+    <div class="alert alert-info alert-dismissible fade show mt-3" role="alert">
+        @TempData["LogoutInfo"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
 <div class="hero-banner p-5 mb-4 bg-light rounded-3 text-center shadow-sm">
     <h1 class="display-3 fw-bold" style="color:#e67e22;">TakiTokacim'a Hoş Geldiniz!</h1>
     <p class="lead mt-3 mb-4">En şık takılar, en uygun fiyatlarla. Kendi tarzını keşfet, hemen alışverişe başla!</p>

@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TakiTokacim")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1409347509af35782c610b311ec13960d9e3e769")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+764e9a312ce0294879a2589d781d2a964a7f0d18")]
 [assembly: System.Reflection.AssemblyProductAttribute("TakiTokacim")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TakiTokacim")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

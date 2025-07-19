@@ -1,11 +1,78 @@
 @{
     ViewData["Title"] = "Hakkımızda";
 }
+@model EntitiyLayer.Models.About
+@if (TempData["AboutInfo"] != null) {
+    <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
+        @TempData["AboutInfo"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
 <div class="row justify-content-center mt-5">
     <div class="col-md-8">
         <div class="card border-0 shadow-lg p-4">
             <h2 class="fw-bold mb-4" style="color:#e67e22;">Hakkımızda</h2>
-            <p style="font-size:1.1rem;">TakiTokacim, en şık ve modern takıların buluşma noktasıdır. Müşterilerimize kaliteli, zarif ve uygun fiyatlı takı seçenekleri sunmak için yola çıktık. Her zevke ve stile uygun yüzük, kolye, bileklik ve küpe modellerimizle tarzınızı tamamlamanızı sağlıyoruz.<br><br>Amacımız, alışveriş deneyiminizi keyifli ve güvenli hale getirmek. Siz de TakiTokacim ile kendinizi ve sevdiklerinizi mutlu edin!</p>
+            <p id="about-message" style="font-size:1.1rem;">@Model.AboutMessage</p>
+            @if (User.IsInRole("Admin")) {
+                <button class="btn btn-sm btn-warning mt-2" data-bs-toggle="modal" data-bs-target="#aboutEditModal">Güncelle</button>
+            }
         </div>
     </div>
-</div> 
+</div>
+
+@if (User.IsInRole("Admin")) {
+<!-- Modal -->
+<div class="modal fade" id="aboutEditModal" tabindex="-1" aria-labelledby="aboutEditModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="aboutEditModalLabel">Hakkımızda Metnini Güncelle</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <textarea id="aboutEditTextarea" class="form-control" rows="6">@Model.AboutMessage</textarea>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">İptal</button>
+        <button type="button" class="btn btn-primary" id="saveAboutBtn">Kaydet</button>
+      </div>
+    </div>
+  </div>
+</div>
+}
+@section Scripts {
+<script>
+$(function(){
+    $('#saveAboutBtn').on('click', function() {
+        var newMsg = $('#aboutEditTextarea').val();
+        $.ajax({
+            url: '/Home/UpdateAboutMessage',
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify(newMsg),
+            success: function(res) {
+                if(res.success){
+                    $('#about-message').text(newMsg);
+                    // Bootstrap 5 ile modal kapatma
+                    if (window.bootstrap && bootstrap.Modal) {
+                        var modal = bootstrap.Modal.getInstance(document.getElementById('aboutEditModal'));
+                        modal.hide();
+                    } else {
+                        // Fallback: elle kapat
+                        document.getElementById('aboutEditModal').classList.remove('show');
+                        document.getElementById('aboutEditModal').style.display = 'none';
+                        document.body.classList.remove('modal-open');
+                        $('.modal-backdrop').remove();
+                    }
+                } else {
+                    alert('Hata: ' + (res.error || 'Güncellenemedi.'));
+                }
+            },
+            error: function(){
+                alert('Sunucu hatası!');
+            }
+        });
+    });
+});
+</script>
+} 
